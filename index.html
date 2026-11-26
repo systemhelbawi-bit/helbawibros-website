@@ -1,1 +1,851 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلباوي إخوان | أجود أنواع الحبوب والبهارات</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Cairo for Arabic, Playfair Display for headers, Inter for Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#991B1B',      /* الأحمر العريق */
+                            gold: '#D97706',     /* الذهبي الدافئ */
+                            dark: '#111827',     /* الغامق */
+                            cream: '#FEFBF3',    /* الكريمي الفاتح والخلفيات */
+                            clay: '#F5F2EB'      /* خلفيات الكروت */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(180-deg, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.8) 50%, rgba(17, 24, 39, 0.95) 100%);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans transition-all duration-300">
 
+    <!-- Top Info Bar -->
+    <div class="bg-brand-red text-white py-2 px-4 text-xs sm:text-sm text-center font-medium">
+        <span id="promo-bar">🌾 منتوجاتنا دائماً في الطليعة - منذ ١٩٨٢ | الجودة والأصالة في كل بيت 🌾</span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-gray-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <!-- Brand Logo -->
+                    <img src="image_4.png" alt="حلباوي إخوان Logo" class="h-16 w-auto">
+                    <div class="hidden sm:block">
+                        <span id="nav-brand" class="block font-bold text-lg leading-tight tracking-wider text-amber-50">حلباوي إخوان</span>
+                        <span id="nav-sub" class="block text-xs text-brand-gold font-semibold">تأسست عام ١٩٨٢</span>
+                    </div>
+                </div>
+                
+                <!-- Navbar Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="#about" id="nav-about-link" class="hover:text-brand-gold transition-colors">من نحن</a>
+                    <a href="#journey" id="nav-journey-link" class="hover:text-brand-gold transition-colors">رحلة الجودة</a>
+                    <a href="#catalog" id="nav-catalog-link" class="hover:text-brand-gold transition-colors">منتجاتنا</a>
+                    <a href="#contact" id="nav-contact-link" class="hover:text-brand-gold transition-colors font-bold text-brand-gold border border-brand-gold/30 px-3 py-1 rounded">طلب جملة</a>
+                </div>
+
+                <!-- Language Toggle & Actions -->
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleLanguage()" class="flex items-center gap-1 bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="lang-btn">EN</span>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md hover:bg-gray-800 focus:outline-none">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-gray-800 px-4 pt-2 pb-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" id="mob-about-link" class="block hover:text-brand-gold py-2 border-b border-gray-800">من نحن</a>
+            <a href="#journey" onclick="toggleMobileMenu()" id="mob-journey-link" class="block hover:text-brand-gold py-2 border-b border-gray-800">رحلة الجودة</a>
+            <a href="#catalog" onclick="toggleMobileMenu()" id="mob-catalog-link" class="block hover:text-brand-gold py-2 border-b border-gray-800">منتجاتنا</a>
+            <a href="#contact" onclick="toggleMobileMenu()" id="mob-contact-link" class="block text-brand-gold hover:text-white font-bold py-2">طلب جملة</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center bg-cover bg-center" style="background-image: url('image_21.png');">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white z-10 w-full">
+            <div class="max-w-3xl text-right" id="hero-text-container">
+                <span id="hero-badge" class="inline-flex items-center gap-2 bg-brand-red/90 border border-brand-red text-amber-200 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6 shadow-md tracking-wider">
+                     في لبنان منذ ١٩٨٢ • أكثر من ٤٠ عاماً من الأصالة
+                </span>
+                <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow">
+                    أجود أنواع الحبوب والبهارات
+                </h1>
+                <h2 id="hero-subtitle" class="text-2xl sm:text-3xl font-serif text-brand-gold italic mb-6">
+                    منتوجاتنا دائماً في الطليعة
+                </h2>
+                <p id="hero-description" class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl drop-shadow">
+                    شركة حلباوي إخوان اسم ظهر في العام ١٩٨٢ وتشكل باتحاد إخوة، فاختاروا طريق الاختصاص في إنتاج أجود أنواع الحبوب والبهارات المستوردة من شتى أنحاء العالم وتعبئتها تحت أحسن الشروط الصحية بعد تعقيمها وغربلتها وتنقيتها لتكون جاهزة للطبخ وعلى موائدكم بأعلى معايير النقاء.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-start">
+                    <a href="#catalog" id="hero-primary-btn" class="bg-brand-red hover:bg-red-800 text-white text-center px-8 py-3.5 rounded-lg font-bold shadow-lg hover:shadow-red-800/30 transform hover:-translate-y-0.5 transition-all">
+                        تصفح المنتجات
+                    </a>
+                    <a href="#contact" id="hero-secondary-btn" class="bg-white/10 hover:bg-white/15 text-white text-center border border-white/20 px-8 py-3.5 rounded-lg font-bold backdrop-blur-sm transition-all">
+                        طلب أسعار الجملة
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Story (About) -->
+    <section id="about" class="py-20 bg-brand-cream border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Area -->
+                <div class="order-2 lg:order-1" id="about-text-container">
+                    <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold text-brand-dark mb-6 border-r-4 border-brand-red pr-4">من نحن؟</h2>
+                    <p id="about-p1" class="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
+                        تأسست شركة **حلباوي إخوان** عام ١٩٨٢ في لبنان، لتصبح اسماً مرادفاً للجودة، الأمانة، والتميز. بدأنا بمسيرة عائلية صادقة جمعت الإخوة على هدف واحد: تقديم أجود ما تنتجه الطبيعة من حبوب وبهارات وتوابل إلى المستهلك اللبناني والعربي، بالاعتماد على مهارات يدوية وتقنيات متوارثة.
+                    </p>
+                    <p id="about-p2" class="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
+                        مع مرور العقود، واكبنا الحداثة وأدخلنا **أحدث وسائل التنقية والتعقيم** لنضمن خلو منتجاتنا من الشوائب مع الاحتفاظ بنكهاتها الطبيعية الكاملة. نحن لا نبيع مجرد مواد غذائية، بل نقدّم المذاق الأصيل الذي يثق به الطهاة وتعتمد عليه العائلات لتحضير أشهى الوجبات اليومية.
+                    </p>
+                    <!-- Small Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+                        <div class="text-center">
+                            <span class="block text-3xl font-extrabold text-brand-red">١٩٨٢</span>
+                            <span id="stat-since" class="text-xs sm:text-sm text-gray-500 font-semibold">تاريخ التأسيس</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-extrabold text-brand-gold">+٤٠</span>
+                            <span id="stat-years" class="text-xs sm:text-sm text-gray-500 font-semibold">عاماً من الخبرة</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-extrabold text-brand-dark">+١٠٠</span>
+                            <span id="stat-items" class="text-xs sm:text-sm text-gray-500 font-semibold">صنف ومنتج</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Area -->
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <img src="image_4.png" alt="حلباوي إخوان الشعار الرسمي" class="max-w-[320px] w-full h-auto drop-shadow-xl bg-brand-dark/5 p-8 rounded-2xl border border-gray-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Quality Journey Section -->
+    <section id="journey" class="py-20 bg-brand-clay">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span id="journey-badge" class="text-brand-gold font-extrabold text-xs sm:text-sm uppercase tracking-widest block mb-2">كيف نصنع الفارق؟</span>
+                <h2 id="journey-title" class="text-3xl sm:text-4xl font-extrabold text-brand-dark">رحلة الجودة والتعقيم</h2>
+                <div class="h-1 w-20 bg-brand-red mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="steps-container">
+                <!-- step 1 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-6">
+                        <i class="fa-solid fa-ship text-2xl"></i>
+                    </div>
+                    <h3 id="step-1-title" class="text-lg font-bold text-brand-dark mb-3">١. الاستيراد المباشر</h3>
+                    <p id="step-1-desc" class="text-sm text-gray-600 leading-relaxed">نستورد نخبة الحبوب والبهارات الخام مباشرة من موطنها الأصلي في مختلف أنحاء العالم، لضمان الطزاجة والجودة الفائقة.</p>
+                </div>
+                <!-- step 2 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-brand-red/10 flex items-center justify-center text-brand-red mb-6">
+                        <i class="fa-solid fa-filter-circle-xmark text-2xl"></i>
+                    </div>
+                    <h3 id="step-2-title" class="text-lg font-bold text-brand-dark mb-3">٢. الغربلة اليدوية والسورتكس</h3>
+                    <p id="step-2-desc" class="text-sm text-gray-600 leading-relaxed">تُنقّى الحبوب يدوياً أو عبر أحدث أجهزة السورتكس (Sortex) الإلكترونية، لإزالة الشوائب والحصول على حبة مثالية.</p>
+                </div>
+                <!-- step 3 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-brand-dark/10 flex items-center justify-center text-brand-dark mb-6">
+                        <i class="fa-solid fa-wind text-2xl"></i>
+                    </div>
+                    <h3 id="step-3-title" class="text-lg font-bold text-brand-dark mb-3">٣. التعقيم الكامل</h3>
+                    <p id="step-3-desc" class="text-sm text-gray-600 leading-relaxed">تخضع جميع المواد لعمليات تعقيم دقيقة وطبيعية خالية من الكيماويات، للقضاء على أي كائنات دقيقة وحمايتها لأطول فترة.</p>
+                </div>
+                <!-- step 4 -->
+                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 mb-6">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 id="step-4-title" class="text-lg font-bold text-brand-dark mb-3">٤. طحن وخلط طازج</h3>
+                    <p id="step-4-desc" class="text-sm text-gray-600 leading-relaxed">نطحن البهارات فوراً ونحضّر الخلطات اللبنانية التراثية والسرّية بعناية فائقة لتصل موائدكم بكامل روائحها العطرة والشهية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section id="catalog" class="py-20 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span id="cat-badge" class="text-brand-red font-extrabold text-xs sm:text-sm uppercase tracking-widest block mb-2">تصفح أصنافنا</span>
+                    <h2 id="cat-title" class="text-3xl sm:text-4xl font-extrabold text-brand-dark">كتالوج المنتجات</h2>
+                    <div class="h-1 w-16 bg-brand-gold mt-4 rounded"></div>
+                </div>
+                <!-- Search & Filters -->
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <div class="relative w-full sm:w-64">
+                        <input type="text" id="search-input" oninput="filterProducts()" placeholder="البحث عن منتج..." class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-3.5 text-gray-400 text-sm"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="flex flex-wrap gap-2 mb-8 overflow-x-auto pb-2 scrollbar-hide" id="filters-container">
+                <button onclick="setCategory('all')" id="btn-all" class="bg-brand-red text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all active-filter">الكل</button>
+                <button onclick="setCategory('grains')" id="btn-grains" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">الحبوب والبقوليات</button>
+                <button onclick="setCategory('spices')" id="btn-spices" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">البهارات والخلطات</button>
+                <button onclick="setCategory('zaatar')" id="btn-zaatar" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">أعشاب وزعتر</button>
+                <button onclick="setCategory('mouneh')" id="btn-mouneh" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">المونة والحلويات</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="products-grid">
+                <!-- Products will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- wholesale & Contact Section -->
+    <section id="contact" class="py-20 bg-brand-clay border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div id="contact-info-container">
+                    <h2 id="contact-title" class="text-3xl font-extrabold text-brand-dark mb-4 border-r-4 border-brand-red pr-4">تواصل معنا الآن</h2>
+                    <p id="contact-desc" class="text-gray-600 mb-8">إذا كنت سوبر ماركت، مطعم، أو موزع، نحن نؤمن احتياجاتك من الحبوب والبهارات بأفضل جودة وأسعار تنافسية. تواصل مع قسم المبيعات للحصول على عروض مخصصة.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 id="call-wa" class="font-bold text-brand-dark">واتساب مبيعات الجملة</h4>
+                                <a href="https://wa.me/9613123456" target="_blank" class="text-gray-600 hover:text-emerald-600 transition-colors">961 3 123 456+</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 id="call-phone" class="font-bold text-brand-dark">الهاتف الأرضي</h4>
+                                <a href="tel:01123456" class="text-gray-600 hover:text-blue-600 transition-colors">01 123 456</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gray-200 text-brand-dark flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 id="call-loc" class="font-bold text-brand-dark">العنوان</h4>
+                                <p id="call-loc-detail" class="text-gray-600">لبنان، بيروت - المدينة الرياضية، شارع حلباوي إخوان</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm" id="form-container">
+                    <h3 id="form-title" class="text-xl font-bold text-brand-dark mb-6">طلب عرض أسعار جملة</h3>
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label id="lbl-name" class="block text-sm font-semibold text-gray-700 mb-1">الاسم أو اسم المؤسسة</label>
+                            <input type="text" required class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-red">
+                        </div>
+                        <div>
+                            <label id="lbl-phone" class="block text-sm font-semibold text-gray-700 mb-1">رقم الهاتف أو الواتساب</label>
+                            <input type="tel" required class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-red">
+                        </div>
+                        <div>
+                            <label id="lbl-needs" class="block text-sm font-semibold text-gray-700 mb-1">الأصناف المطلوبة</label>
+                            <textarea rows="3" required placeholder="مثال: حمص، عدس، سبع بهارات..." class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-red"></textarea>
+                        </div>
+                        <button type="submit" id="form-submit-btn" class="w-full bg-brand-red hover:bg-red-800 text-white font-bold py-3 rounded-lg transition-colors">إرسال الطلب</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-center border-b border-gray-800 pb-8">
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <img src="image_4.png" alt="حلباوي Logo" class="h-16 w-auto">
+                    <div>
+                        <span id="footer-title" class="block font-bold text-lg text-amber-50 leading-tight">حلباوي إخوان</span>
+                        <span id="footer-sub" class="block text-xs text-brand-gold">منذ ١٩٨٢ | دائماً في الطليعة</span>
+                    </div>
+                </div>
+                <!-- Nav Links -->
+                <div class="flex gap-4 justify-center text-sm font-medium text-gray-400">
+                    <a href="#about" id="foot-about" class="hover:text-white transition-colors">من نحن</a>
+                    <a href="#journey" id="foot-journey" class="hover:text-white transition-colors">رحلة الجودة</a>
+                    <a href="#catalog" id="foot-catalog" class="hover:text-white transition-colors">منتجاتنا</a>
+                </div>
+                <!-- Social Media -->
+                <div class="flex gap-4 justify-center md:justify-end text-xl">
+                    <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-gray-500 text-center gap-4">
+                <p id="copyright">© ٢٠٢٦ شركة حلباوي إخوان. جميع الحقوق محفوظة.</p>
+                <p id="built-by">بُني بكل فخر في لبنان 🇱🇧</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal for zoom View -->
+    <div id="product-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/80 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-brand-dark/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="modal-img" src="" alt="صورة المنتج" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <span id="modal-category" class="text-xs font-bold text-brand-gold uppercase tracking-widest block mb-1">القسم</span>
+                <h3 id="modal-title" class="text-2xl font-extrabold text-brand-dark mb-2">اسم المنتج</h3>
+                <p id="modal-description" class="text-gray-600 text-sm leading-relaxed mb-6">تفاصيل المنتج والوزن والتحضير</p>
+                <div class="flex gap-3">
+                    <a id="modal-whatsapp-btn" href="" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-center font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span id="modal-wa-text">استفسر بالواتساب</span>
+                    </a>
+                    <button onclick="closeModal()" id="modal-close-btn" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-5 rounded-lg transition-colors">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Website Translation & Catalog Data Javascript -->
+    <script>
+        let currentLang = 'ar';
+        let currentCategory = 'all';
+
+        // Translation Data
+        const translations = {
+            ar: {
+                promoBar: '🌾 منتوجاتنا دائماً في الطليعة - منذ ١٩٨٢ | الجودة والأصالة في كل بيت 🌾',
+                navAbout: 'من نحن',
+                navJourney: 'رحلة الجودة',
+                navCatalog: 'منتجاتنا',
+                navSub: 'تأسست عام ١٩٨٢',
+                heroBadge: ' في لبنان منذ ١٩٨٢ • أكثر من ٤٠ عاماً من الأصالة',
+                heroTitle: 'أجود أنواع الحبوب والبهارات',
+                heroSubtitle: 'منتوجاتنا دائماً في الطليعة',
+                heroDescription: 'شركة حلباوي إخوان اسم ظهر في العام ١٩٨٢ وتشكل باتحاد إخوة، فاختاروا طريق الاختصاص في إنتاج أجود أنواع الحبوب والبهارات المستوردة من شتى أنحاء العالم وتعبئتها تحت أحسن الشروط الصحية بعد تعقيمها وغربلتها وتنقيتها لتكون جاهزة للطبخ وعلى موائدكم بأعلى معايير النقاء.',
+                heroPrimary: 'تصفح المنتجات',
+                heroSecondary: 'طلب أسعار الجملة',
+                aboutTitle: 'من نحن؟',
+                aboutP1: 'تأسست شركة **حلباوي إخوان** عام ١٩٨٢ في لبنان، لتصبح اسماً مرادفاً للجودة، الأمانة، والتميز. بدأنا بمسيرة عائلية صادقة جمعت الإخوة على هدف واحد: تقديم أجود ما تنتجه الطبيعة من حبوب وبهارات وتوابل إلى المستهلك اللبناني والعربي، بالاعتماد على مهارات يدوية وتقنيات متوارثة.',
+                aboutP2: 'مع مرور العقود، واكبنا الحداثة وأدخلنا **أحدث وسائل التنقية والتعقيم** لنضمن خلو منتجاتنا من الشوائب مع الاحتفاظ بنكهاتها الطبيعية الكاملة. نحن لا نبيع مجرد مواد غذائية، بل نقدّم المذاق الأصيل الذي يثق به الطهاة وتعتمد عليه العائلات لتحضير أشهى الوجبات اليومية.',
+                statSince: 'تاريخ التأسيس',
+                statYears: 'عاماً من الخبرة',
+                statItems: 'صنف ومنتج',
+                journeyBadge: 'كيف نصنع الفارق؟',
+                journeyTitle: 'رحلة الجودة والتعقيم',
+                step1Title: '١. الاستيراد المباشر',
+                step1Desc: 'نستورد نخبة الحبوب والبهارات الخام مباشرة من موطنها الأصلي في مختلف أنحاء العالم، لضمان الطزاجة والجودة الفائقة.',
+                step2Title: '٢. الغربلة اليدوية والسورتكس',
+                step2Desc: 'تُنقّى الحبوب يدوياً أو عبر أحدث أجهزة السورتكس (Sortex) الإلكترونية، لإزالة الشوائب والحصول على حبة مثالية.',
+                step3Title: '٣. التعقيم الكامل',
+                step3Desc: 'تخضع جميع المواد لعمليات تعقيم دقيقة وطبيعية خالية من الكيماويات، للقضاء على أي كائنات دقيقة وحمايتها لأطول فترة.',
+                step4Title: '٤. طحن وخلط طازج',
+                step4Desc: 'نطحن البهارات فوراً ونحضّر الخلطات اللبنانية التراثية والسرّية بعناية فائقة لتصل موائدكم بكامل روائحها العطرة والشهية.',
+                catBadge: 'تصفح أصنافنا',
+                catTitle: 'كتالوج المنتجات',
+                searchPlaceholder: 'البحث عن منتج...',
+                catAll: 'الكل',
+                catGrains: 'الحبوب والبقوليات',
+                catSpices: 'البهارات والخلطات',
+                catZaatar: 'أعشاب وزعتر',
+                catMouneh: 'المونة والحلويات',
+                contactTitle: 'تواصل معنا الآن',
+                contactDesc: 'إذا كنت سوبر ماركت، مطعم، أو موزع، نحن نؤمن احتياجاتك من الحبوب والبهارات بأفضل جودة وأسعار تنافسية. تواصل مع قسم المبيعات للحصول على عروض مخصصة.',
+                callWa: 'واتساب مبيعات الجملة',
+                callPhone: 'الهاتف الأرضي',
+                callLoc: 'العنوان',
+                callLocDetail: 'لبنان، بيروت - المدينة الرياضية، شارع حلباوي إخوان',
+                formTitle: 'طلب عرض أسعار جملة',
+                lblName: 'الاسم أو اسم المؤسسة',
+                lblPhone: 'رقم الهاتف أو الواتساب',
+                lblNeeds: 'الأصناف المطلوبة',
+                formSubmit: 'إرسال الطلب',
+                copyright: '© ٢٠٢٦ شركة حلباوي إخوان. جميع الحقوق محفوظة.',
+                builtBy: 'بُني بكل فخر في لبنان 🇱🇧',
+                modalWaText: 'استفسر بالواتساب',
+                modalClose: 'إغلاق'
+            },
+            en: {
+                promoBar: '🌾 Our Products Always at the Forefront - Since 1982 | Quality & Authenticity in Every Home 🌾',
+                navAbout: 'About Us',
+                navJourney: 'Our Journey',
+                navCatalog: 'Products',
+                navSub: 'Founded in 1982',
+                heroBadge: 'In Lebanon Since 1982 • Over 40 Years of Heritage',
+                heroTitle: 'Premium Grains & Spices',
+                heroSubtitle: 'Our Products Always at the Forefront',
+                heroDescription: 'Helbawi Bros is a name that emerged in 1982 as a union of brothers who dedicated themselves to producing the finest natural grains and spices imported from all around the world. Prepared with manual expertise and electronic Sortex sorting, sterilizing, and grinding, we deliver quality ready for your kitchen under optimal health conditions.',
+                heroPrimary: 'Browse Products',
+                heroSecondary: 'Wholesale Inquiry',
+                aboutTitle: 'About Us',
+                aboutP1: 'Founded in 1982 in Lebanon, **Helbawi Bros** has become a name synonymous with quality, trust, and distinction. Our journey began as a family mission, uniting brothers around one goal: bringing the finest natural grains, spices, and seasonings to the Lebanese and Arab consumer using traditional, manual skills.',
+                aboutP2: 'Over the decades, we integrated modernity, adopting the **latest Sortex electronic sorting and sterilization** methods to guarantee zero impurities while preserving natural rich flavors. We do not just sell dry foods; we offer the authentic taste chefs trust and families rely on.',
+                statSince: 'Year Founded',
+                statYears: 'Years of Experience',
+                statItems: 'Featured Products',
+                journeyBadge: 'What Makes Us Different?',
+                journeyTitle: 'The Quality & Sterilization Journey',
+                step1Title: '1. Direct Sourcing',
+                step1Desc: 'We source premier grains and raw spices directly from their origin countries globally, securing unmatched freshness and high grades.',
+                step2Title: '2. Sorting & Sortex',
+                step2Desc: 'All materials are cleaned manually and processed using state-of-the-art Sortex optical sorting machines to remove natural debris.',
+                step3Title: '3. Natural Sterilization',
+                step3Desc: 'Products undergo advanced, chemical-free sterilization steps to preserve nutritional density while destroying microbial load.',
+                step4Title: '4. Fresh Grinding & Blending',
+                step4Desc: 'Spices are ground upon request. We craft our heritage-blended Lebanese recipes in-house, securing potent flavors.',
+                catBadge: 'Browse our Category',
+                catTitle: 'Product Catalog',
+                searchPlaceholder: 'Search products...',
+                catAll: 'All',
+                catGrains: 'Grains & Pulses',
+                catSpices: 'Spices & Blends',
+                catZaatar: 'Herbs & Zaatar',
+                catMouneh: 'Mouneh & Sweet Mixes',
+                contactTitle: 'Contact Us Now',
+                contactDesc: 'If you are a supermarket, restaurant, or distributor, we secure your grain and spice needs at top quality and competitive wholesale rates. Connect with Sales for customized offers.',
+                callWa: 'Wholesale WhatsApp',
+                callPhone: 'Phone Line',
+                callLoc: 'Location',
+                callLocDetail: 'Lebanon, Beirut - Cite Sportive, Helbawi Bros Street',
+                formTitle: 'Request a Wholesale Quote',
+                lblName: 'Contact Name or Company',
+                lblPhone: 'Phone or WhatsApp No.',
+                lblNeeds: 'Requested Products',
+                formSubmit: 'Submit Request',
+                copyright: '© 2026 Helbawi Bros. All rights reserved.',
+                builtBy: 'Proudly built in Lebanon 🇱🇧',
+                modalWaText: 'Inquire on WhatsApp',
+                modalClose: 'Close'
+            }
+        };
+
+        // Product Data
+        const products = [
+            // Grains
+            {
+                id: 1,
+                category: 'grains',
+                name_ar: 'عدس مجروش',
+                name_en: 'Crushed Orange Lentils',
+                desc_ar: 'عدس أحمر مجروش فاخر، منقى ومغربل يدوياً وإلكترونياً عبر السورتكس. سريع الطهي ومثالي للشوربة اليومية اللبنانية.',
+                desc_en: 'Premium red crushed lentils, carefully sifted manually and through electronic Sortex. Cooks quickly, ideal for traditional soup.',
+                packaging_ar: 'مغلف مفرغ ٩٠٧ غرام / شوالات جملة',
+                packaging_en: '907g vacuum pack / wholesale sacks',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            {
+                id: 2,
+                category: 'grains',
+                name_ar: 'حمص فحلي',
+                name_en: 'Chickpeas Fahli',
+                desc_ar: 'حمص فحلي عريض، حبة ممتازة مستوردة ومغسولة وتنقيتها خالية من الشوائب. ممتاز للفرقع والطهي والتسقية اللبنانية.',
+                desc_en: 'Extralarge Fahli chickpeas, premium grade, washed and sorted. Perfect for boiling, making hummus, and traditional stews.',
+                packaging_ar: 'مغلف مفرغ ٩٠٧ غرام / شوالات جملة',
+                packaging_en: '907g vacuum pack / wholesale sacks',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            {
+                id: 3,
+                category: 'grains',
+                name_ar: 'فاصوليا بيضاء',
+                name_en: 'Lima Beans',
+                desc_ar: 'فاصوليا بيضاء يابسة (حبة متوسطة وعريضة)، منقاة بالكامل وسريعة النضج ومثالية لليخنات والطهي الشرقي.',
+                desc_en: 'Dry white Lima beans (medium and large size), fully sifted, quick to cook, and perfect for rich stews.',
+                packaging_ar: 'مغلف ٥٠٠ غرام / شوالات جملة',
+                packaging_en: '500g pouch / wholesale sacks',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            {
+                id: 4,
+                category: 'grains',
+                name_ar: 'طحين فاخر',
+                name_en: 'Flour Extra Quality',
+                desc_ar: 'طحين عالي الجودة لجميع الاستخدامات (Good Medal / Good Mark) من القمح الممتاز، مثالي للحلويات والمعجنات والمناقيش.',
+                desc_en: 'Premium all-purpose flour (Good Medal / Good Mark) from top grade wheat, perfect for desserts, baking, and traditional manakish.',
+                packaging_ar: 'مغلفات ورقية ١ كغ و٢ كغ',
+                packaging_en: '1kg & 2kg paper packs',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            // Spices
+            {
+                id: 5,
+                category: 'spices',
+                name_ar: 'السبع بهارات',
+                name_en: 'Seven Spices',
+                desc_ar: 'الخلطة اللبنانية الأصلية، توليفة غنية من البهارات الخام المطحونة طازجاً (قرفة، بهار، قرنفل، جوزة الطيب، فلفل، كزبرة، زنجبيل).',
+                desc_en: 'The authentic Lebanese blend, a rich recipe of freshly ground spices (cinnamon, pepper, cloves, nutmeg, allspice, coriander, ginger).',
+                packaging_ar: 'علب ومرطبانات وأكياس مخصصة',
+                packaging_en: 'Pouches, jars, and customized retail bags',
+                img: 'image_13.png'
+            },
+            {
+                id: 6,
+                category: 'spices',
+                name_ar: 'كمون ناعم',
+                name_en: 'Cumin Fine',
+                desc_ar: 'كمون خام من الدرجة الأولى، مطحون فوراً بعد الغربلة والتعقيم ليحتفظ بزيته الطيار ورائحته النفاذة التي تضفي نكهة أصلية.',
+                desc_en: 'Premium cumin seeds, freshly ground after thorough sifting and sterilization to preserve its natural essential oils.',
+                packaging_ar: 'ظرف ٥٠ غرام / مرطبانات ووزن جملة',
+                packaging_en: '50g pouches / jars & bulk bags',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            {
+                id: 7,
+                category: 'spices',
+                name_ar: 'بهار الكبة',
+                name_en: 'Kibbeh Spices',
+                desc_ar: 'خلطة سرّية وتراثية مميزة من حلباوي إخوان، مصممة خصيصاً لإعطاء الكبة اللبنانية النكهة والرائحة العطرة الأصيلة.',
+                desc_en: 'A secret heritage blend from Helbawi Bros, specifically crafted to give traditional Lebanese Kibbeh its genuine, aromatic flavor.',
+                packaging_ar: 'أكياس وعلب بهارات مخصصة',
+                packaging_en: 'Retail spice pouches and boxes',
+                img: 'image_13.png'
+            },
+            {
+                id: 8,
+                category: 'spices',
+                name_ar: 'فلفل أحمر (عقدة حمراء)',
+                name_en: 'Red Pepper',
+                desc_ar: 'فلفل أحمر ناعم (حار أو حلو) محضر من أجود قرون الفلفل المجففة والمطحونة، بلون طبيعي مشع وطعم غني وشهي.',
+                desc_en: 'Fine red pepper (hot or sweet) ground from selected dried red peppers, boasting a natural vibrant color and rich spice.',
+                packaging_ar: 'ظرف ٥٠ غرام / مرطبانات ووزن جملة',
+                packaging_en: '50g pouches / jars & bulk bags',
+                img: 'image_13.png'
+            },
+            // Zaatar & Herbs
+            {
+                id: 9,
+                category: 'zaatar',
+                name_ar: 'زعتر لبناني بلدي',
+                name_en: 'Lebanese Baladi Zaatar',
+                desc_ar: 'خلطة الزعتر البلدي اللبناني الشهير، مجهزة من الزعتر البري مع السمسم المحمص الفاخر والسماق البلدي الحمضي.',
+                desc_en: 'Famous traditional Lebanese Zaatar, prepared with wild thyme, premium roasted sesame, and tangy Baladi sumac.',
+                packaging_ar: 'أكياس عائلية ومغلفات ٤٠٠ غرام',
+                packaging_en: '400g retail & family packs',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            {
+                id: 10,
+                category: 'zaatar',
+                name_ar: 'ملوخية بلدي يابسة',
+                name_en: 'Dried Molokhia',
+                desc_ar: 'أوراق ملوخية طبيعية مجففة ومنقاة بالكامل يدوياً من الأعواد، بلون أخضر نضر ورائحة طيبة جاهزة للطهي المباشر.',
+                desc_en: 'Natural dried Molokhia leaves, manually destemmed and sifted, boasting a fresh green color and excellent earthy flavor.',
+                packaging_ar: 'أكياس خفيفة الوزن بأحجام متعددة',
+                packaging_en: 'Lightweight packs in multiple sizes',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            // Mouneh
+            {
+                id: 11,
+                category: 'mouneh',
+                name_ar: 'كشك بلدي طبيعي',
+                name_en: 'Traditional Baladi Kishk',
+                desc_ar: 'كشك بلدي لبناني أصيل، محضر من البرغل المطحون المخمر مع لبن الماعز والبلدي وتجفيفه تحت أشعة الشمس الجبلية.',
+                desc_en: 'Authentic Lebanese Kishk, made from cracked wheat (burghul) fermented with natural goat/cow yogurt and sun-dried.',
+                packaging_ar: 'أكياس ومغلفات ٥٠٠ غرام',
+                packaging_en: '500g pouches & traditional sacks',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            },
+            {
+                id: 12,
+                category: 'mouneh',
+                name_ar: 'علب سحلب ومغلي',
+                name_en: 'Sahlab & Meghli Boxes',
+                desc_ar: 'علب خلطات السحلب والمغلي التراثية الجاهزة، خلطة غنية وسريعة التحضير بالنكهة اللبنانية الغنية والمحبوبة بالضيافات.',
+                desc_en: 'Ready mix Meghli and Sahlab boxes, heavily flavored and rich. Quick to prepare, offering traditional festive hospitality flavors.',
+                packaging_ar: 'علب كرتونية جاهزة مع التوابل',
+                packaging_en: 'Ready cardboard retail boxes',
+                img: 'watermarked_img_17000710410433381755.jpg'
+            }
+        ];
+
+        // Webpage Startup
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateLanguageUI();
+        });
+
+        // Switch Language function
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = currentLang;
+            
+            updateLanguageUI();
+            renderProducts();
+        }
+
+        // Apply Language texts
+        function updateLanguageUI() {
+            const data = translations[currentLang];
+            
+            // Promobar
+            document.getElementById('promo-bar').textContent = data.promoBar;
+
+            // Nav link texts
+            document.getElementById('nav-about-link').textContent = data.navAbout;
+            document.getElementById('nav-journey-link').textContent = data.navJourney;
+            document.getElementById('nav-catalog-link').textContent = data.navCatalog;
+            document.getElementById('nav-contact-link').textContent = currentLang === 'ar' ? 'طلب جملة' : 'Wholesale';
+            
+            document.getElementById('mob-about-link').textContent = data.navAbout;
+            document.getElementById('mob-journey-link').textContent = data.navJourney;
+            document.getElementById('mob-catalog-link').textContent = data.navCatalog;
+            document.getElementById('mob-contact-link').textContent = currentLang === 'ar' ? 'طلب جملة' : 'Wholesale';
+
+            document.getElementById('nav-brand').textContent = currentLang === 'ar' ? 'حلباوي إخوان' : 'Helbawi Bros.';
+            document.getElementById('nav-sub').textContent = data.navSub;
+
+            // Hero section
+            document.getElementById('hero-badge').innerHTML = `🌾 ${data.heroBadge}`;
+            document.getElementById('hero-title').textContent = data.heroTitle;
+            document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
+            document.getElementById('hero-description').textContent = data.heroDescription;
+            document.getElementById('hero-primary-btn').textContent = data.heroPrimary;
+            document.getElementById('hero-secondary-btn').textContent = data.heroSecondary;
+
+            // About Us
+            document.getElementById('about-title').textContent = data.aboutTitle;
+            document.getElementById('about-p1').innerHTML = currentLang === 'ar' ? 
+                'تأسست شركة <strong>حلباوي إخوان</strong> عام ١٩٨٢ في لبنان، لتصبح اسماً مرادفاً للجودة، الأمانة، والتميز. بدأنا بمسيرة عائلية صادقة جمعت الإخوة على هدف واحد: تقديم أجود ما تنتجه الطبيعة من حبوب وبهارات وتوابل إلى المستهلك اللبناني والعربي، بالاعتماد على مهارات يدوية وتقنيات متوارثة.' : 
+                'Founded in 1982 in Lebanon, <strong>Helbawi Bros</strong> has become a name synonymous with quality, trust, and distinction. Our journey began as a family mission, uniting brothers around one goal: bringing the finest natural grains, spices, and seasonings to the Lebanese and Arab consumer using traditional, manual skills.';
+            document.getElementById('about-p2').innerHTML = currentLang === 'ar' ? 
+                'مع مرور العقود، واكبنا الحداثة وأدخلنا <strong>أحدث وسائل التنقية والتعقيم</strong> لنضمن خلو منتجاتنا من الشوائب مع الاحتفاظ بنكهاتها الطبيعية الكاملة. نحن لا نبيع مجرد مواد غذائية، بل نقدّم المذاق الأصيل الذي يثق به الطهاة وتعتمد عليه العائلات لتحضير أشهى الوجبات اليومية.' : 
+                'Over the decades, we integrated modernity, adopting the <strong>latest Sortex optical sorting and sterilization</strong> methods to guarantee zero impurities while preserving natural rich flavors. We do not just sell dry foods; we offer the authentic taste chefs trust and families rely on.';
+            
+            document.getElementById('stat-since').textContent = data.statSince;
+            document.getElementById('stat-years').textContent = data.statYears;
+            document.getElementById('stat-items').textContent = data.statItems;
+
+            // Quality Steps
+            document.getElementById('journey-badge').textContent = data.journeyBadge;
+            document.getElementById('journey-title').textContent = data.journeyTitle;
+            
+            document.getElementById('step-1-title').textContent = data.step1Title;
+            document.getElementById('step-1-desc').textContent = data.step1Desc;
+            document.getElementById('step-2-title').textContent = data.step2Title;
+            document.getElementById('step-2-desc').textContent = data.step2Desc;
+            document.getElementById('step-3-title').textContent = data.step3Title;
+            document.getElementById('step-3-desc').textContent = data.step3Desc;
+            document.getElementById('step-4-title').textContent = data.step4Title;
+            document.getElementById('step-4-desc').textContent = data.step4Desc;
+
+            // Catalog Intro and Search placeholder
+            document.getElementById('cat-badge').textContent = data.catBadge;
+            document.getElementById('cat-title').textContent = data.catTitle;
+            document.getElementById('search-input').placeholder = data.searchPlaceholder;
+            
+            // Catalog Category button translations
+            document.getElementById('btn-all').textContent = data.catAll;
+            document.getElementById('btn-grains').textContent = data.catGrains;
+            document.getElementById('btn-spices').textContent = data.catSpices;
+            document.getElementById('btn-zaatar').textContent = data.catZaatar;
+            document.getElementById('btn-mouneh').textContent = data.catMouneh;
+
+            // Contact form Title and fields
+            document.getElementById('contact-title').textContent = data.contactTitle;
+            document.getElementById('contact-desc').textContent = data.contactDesc;
+            document.getElementById('call-wa').textContent = data.callWa;
+            document.getElementById('call-phone').textContent = data.callPhone;
+            document.getElementById('call-loc').textContent = data.callLoc;
+            document.getElementById('call-loc-detail').textContent = data.callLocDetail;
+            
+            document.getElementById('form-title').textContent = data.formTitle;
+            document.getElementById('lbl-name').textContent = data.lblName;
+            document.getElementById('lbl-phone').textContent = data.lblPhone;
+            document.getElementById('lbl-needs').textContent = data.lblNeeds;
+            document.getElementById('form-submit-btn').textContent = data.formSubmit;
+
+            // Footer Section
+            document.getElementById('footer-title').textContent = currentLang === 'ar' ? 'حلباوي إخوان' : 'Helbawi Bros.';
+            document.getElementById('footer-sub').textContent = data.promoBar.replace(/🌾/g, '').trim();
+            document.getElementById('foot-about').textContent = data.navAbout;
+            document.getElementById('foot-journey').textContent = data.navJourney;
+            document.getElementById('foot-catalog').textContent = data.navCatalog;
+            document.getElementById('copyright').textContent = data.copyright;
+            document.getElementById('built-by').textContent = data.builtBy;
+
+            // Language Toggle Btn
+            document.getElementById('lang-btn').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+
+            // Adapt visual text flow based on Language
+            const textContainers = ['hero-text-container', 'about-text-container', 'contact-info-container', 'form-container'];
+            textContainers.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (currentLang === 'ar') {
+                        el.classList.add('text-right');
+                        el.classList.remove('text-left');
+                    } else {
+                        el.classList.add('text-left');
+                        el.classList.remove('text-right');
+                    }
+                }
+            });
+        }
+
+        // Render Cards
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+            const searchVal = document.getElementById('search-input').value.toLowerCase();
+
+            const filtered = products.filter(p => {
+                const name = currentLang === 'ar' ? p.name_ar : p.name_en;
+                const matchesSearch = name.toLowerCase().includes(searchVal);
+                const matchesCat = currentCategory === 'all' || p.category === currentCategory;
+                return matchesSearch && matchesCat;
+            });
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer flex flex-col h-full";
+                card.setAttribute('onclick', `openModal(${p.id})`);
+
+                const title = currentLang === 'ar' ? p.name_ar : p.name_en;
+                const packaging = currentLang === 'ar' ? p.packaging_ar : p.packaging_en;
+
+                card.innerHTML = `
+                    <div class="relative w-full h-40 sm:h-48 overflow-hidden bg-gray-50 border-b border-gray-100">
+                        <img src="${p.img}" alt="${title}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-between flex-1">
+                        <div class="text-right ${currentLang === 'ar' ? 'text-right' : 'text-left'}">
+                            <h3 class="font-bold text-base sm:text-lg text-brand-dark hover:text-brand-red transition-colors duration-200 line-clamp-1">${title}</h3>
+                            <p class="text-xs text-brand-gold font-semibold uppercase mt-1 tracking-wider">${translations[currentLang]['cat' + p.category.charAt(0).toUpperCase() + p.category.slice(1)]}</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-50 flex items-center justify-between text-xs sm:text-sm text-gray-500 gap-2">
+                            <span><i class="fa-solid fa-box text-xs text-gray-400 ml-1"></i> ${packaging}</span>
+                            <i class="fa-solid fa-arrow-left text-brand-red hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Category trigger
+        function setCategory(cat) {
+            currentCategory = cat;
+            
+            // Toggle active filter CSS classes
+            const btns = ['btn-all', 'btn-grains', 'btn-spices', 'btn-zaatar', 'btn-mouneh'];
+            btns.forEach(btnId => {
+                const el = document.getElementById(btnId);
+                el.className = "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all";
+            });
+            
+            const activeId = `btn-${cat}`;
+            document.getElementById(activeId).className = "bg-brand-red text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all active-filter";
+
+            renderProducts();
+        }
+
+        // Real-time Search
+        function filterProducts() {
+            renderProducts();
+        }
+
+        // Display Modal
+        function openModal(id) {
+            const p = products.find(prod => prod.id === id);
+            if (!p) return;
+
+            const modal = document.getElementById('product-modal');
+            const title = currentLang === 'ar' ? p.name_ar : p.name_en;
+            const desc = currentLang === 'ar' ? p.desc_ar : p.desc_en;
+            const packaging = currentLang === 'ar' ? p.packaging_ar : p.packaging_en;
+
+            document.getElementById('modal-img').src = p.img;
+            document.getElementById('modal-category').textContent = translations[currentLang]['cat' + p.category.charAt(0).toUpperCase() + p.category.slice(1)];
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-description').innerHTML = `${desc}<br><br><strong>${currentLang === 'ar' ? 'التعبئة المتوفرة:' : 'Available Packaging:'}</strong> ${packaging}`;
+            
+            // Build direct Custom WhatsApp link
+            const waMsg = encodeURIComponent(`${currentLang === 'ar' ? 'مرحباً حلباوي إخوان، أود الاستفسار عن منتج:' : 'Hello Helbawi Bros, I would like to inquire about product:'} ${title}`);
+            document.getElementById('modal-whatsapp-btn').href = `https://wa.me/9613123456?text=${waMsg}`;
+            document.getElementById('modal-wa-text').textContent = translations[currentLang].modalWaText;
+            document.getElementById('modal-close-btn').textContent = translations[currentLang].modalClose;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // block page background scroll
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // release back background scroll
+        }
+
+        // Mobile Menu trigger
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fa-solid fa-xmark text-xl';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fa-solid fa-bars text-xl';
+            }
+        }
+
+        // Simple Form feedback alert
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alertMsg = currentLang === 'ar' ? 
+                'نشكرك على تواصلك مع شركة حلباوي إخوان! تم إرسال طلب عرض أسعار الجملة بنجاح، وسيتواصل معك أحد مندوبي المبيعات قريباً عبر الهاتف أو الواتساب.' : 
+                'Thank you for contacting Helbawi Bros! Your wholesale inquiry has been submitted successfully. A sales representative will connect with you shortly via phone or WhatsApp.';
+            alert(alertMsg);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
