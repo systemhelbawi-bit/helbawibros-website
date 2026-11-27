@@ -6,9 +6,9 @@
     <title>حلباوي إخوان | أجود أنواع الحبوب والبهارات</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Cairo for Arabic, Playfair Display for headers, Inter for Body) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -17,11 +17,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            red: '#991B1B',      /* الأحمر العريق */
-                            gold: '#D97706',     /* الذهبي الدافئ */
-                            dark: '#111827',     /* الغامق */
-                            cream: '#FEFBF3',    /* الكريمي الفاتح والخلفيات */
-                            clay: '#F5F2EB'      /* خلفيات الكروت */
+                            red: '#991B1B',
+                            gold: '#D97706',
+                            dark: '#111827',
+                            cream: '#FEFBF3',
+                            clay: '#F5F2EB'
                         }
                     },
                     fontFamily: {
@@ -36,9 +36,10 @@
         .gradient-overlay {
             background: linear-gradient(180deg, rgba(17, 24, 39, 0.80) 0%, rgba(17, 24, 39, 0.55) 50%, rgba(17, 24, 39, 0.85) 100%);
         }
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 8px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #D97706; border-radius: 8px; }
     </style>
 </head>
 <body class="bg-brand-cream text-gray-800 font-sans transition-all duration-300">
@@ -55,7 +56,7 @@
                 <div class="flex items-center gap-3">
                     <!-- Brand Logo -->
                     <div class="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden flex items-center justify-center shrink-0">
-                        <img src="image_4.png" alt="حلباوي إخوان Logo" class="w-full h-full object-contain" style="transform: scale(1.0);">
+                        <img src="image_4.png" alt="حلباوي إخوان Logo" class="w-full h-full object-contain" style="transform: scale(4.2);">
                     </div>
                     <div class="hidden sm:block">
                         <span id="nav-brand" class="block font-bold text-lg leading-tight tracking-wider text-amber-50">حلباوي إخوان</span>
@@ -77,7 +78,6 @@
                         <i class="fa-solid fa-globe"></i>
                         <span id="lang-btn">EN</span>
                     </button>
-                    <!-- Mobile Menu Button -->
                     <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md hover:bg-gray-800 focus:outline-none">
                         <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
                     </button>
@@ -99,7 +99,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white z-10 w-full">
             <div class="max-w-3xl text-right" id="hero-text-container">
                 <span id="hero-badge" class="inline-flex items-center gap-2 bg-brand-red/90 border border-brand-red text-amber-200 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6 shadow-md tracking-wider">
-                     في لبنان منذ ١٩٨٢ • أكثر من ٤٠ عاماً من الأصالة
+                    🌾 في لبنان منذ ١٩٨٢ • أكثر من ٤٠ عاماً من الأصالة
                 </span>
                 <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow">
                     أجود أنواع الحبوب والبهارات
@@ -122,11 +122,10 @@
         </div>
     </section>
 
-    <!-- Mission & Story (About) -->
+    <!-- About Section -->
     <section id="about" class="py-20 bg-brand-cream border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Text Area -->
                 <div class="order-2 lg:order-1" id="about-text-container">
                     <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold text-brand-dark mb-6 border-r-4 border-brand-red pr-4">من نحن؟</h2>
                     <p id="about-p1" class="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
@@ -135,7 +134,6 @@
                     <p id="about-p2" class="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
                         مع مرور العقود، واكبنا الحداثة وأدخلنا <strong>أحدث وسائل التنقية والتعقيم</strong> لنضمن خلو منتجاتنا من الشوائب مع الاحتفاظ بنكهاتها الطبيعية الكاملة. نحن لا نبيع مجرد مواد غذائية، بل نقدّم المذاق الأصيل الذي يثق به الطهاة وتعتمد عليه العائلات لتحضير أشهى الوجبات اليومية.
                     </p>
-                    <!-- Small Stats -->
                     <div class="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
                         <div class="text-center">
                             <span class="block text-3xl font-extrabold text-brand-red">١٩٨٢</span>
@@ -146,14 +144,13 @@
                             <span id="stat-years" class="text-xs sm:text-sm text-gray-500 font-semibold">عاماً من الخبرة</span>
                         </div>
                         <div class="text-center">
-                            <span class="block text-3xl font-extrabold text-brand-dark">+١٠٠</span>
+                            <span class="block text-3xl font-extrabold text-brand-dark">+٢٠٠</span>
                             <span id="stat-items" class="text-xs sm:text-sm text-gray-500 font-semibold">صنف ومنتج</span>
                         </div>
                     </div>
                 </div>
-                <!-- Image Area -->
                 <div class="order-1 lg:order-2 flex justify-center">
-                    <div class="w-72 h-72 sm:w-80 sm:h-80 overflow-hidden flex items-center justify-center bg-brand-dark/5 rounded-2xl border border-gray-100 shadow-xl">
+                    <div class="w-72 h-72 sm:w-80 sm:h-80 overflow-hidden flex items-center justify-center bg-brand-dark/5 rounded-2xl border border-gray-100 shadow-xl p-4">
                         <img src="image_4.png" alt="حلباوي إخوان الشعار الرسمي" class="w-full h-full object-contain drop-shadow-xl" style="transform: scale(1);">
                     </div>
                 </div>
@@ -161,7 +158,7 @@
         </div>
     </section>
 
-    <!-- The Quality Journey Section -->
+    <!-- Quality Journey Section -->
     <section id="journey" class="py-20 bg-brand-clay">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -170,9 +167,7 @@
                 <div class="h-1 w-20 bg-brand-red mx-auto mt-4 rounded"></div>
             </div>
 
-            <!-- Steps Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="steps-container">
-                <!-- step 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-6">
                         <i class="fa-solid fa-ship text-2xl"></i>
@@ -180,15 +175,13 @@
                     <h3 id="step-1-title" class="text-lg font-bold text-brand-dark mb-3">١. الاستيراد المباشر</h3>
                     <p id="step-1-desc" class="text-sm text-gray-600 leading-relaxed">نستورد نخبة الحبوب والبهارات الخام مباشرة من موطنها الأصلي في مختلف أنحاء العالم، لضمان الطزاجة والجودة الفائقة.</p>
                 </div>
-                <!-- step 2 -->
                 <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-lg bg-brand-red/10 flex items-center justify-center text-brand-red mb-6">
                         <i class="fa-solid fa-filter-circle-xmark text-2xl"></i>
                     </div>
-                    <h3 id="step-2-title" class="text-lg font-bold text-brand-dark mb-3">٢. الغربلة الاليه </h3>
-                    <p id="step-2-desc" class="text-sm text-gray-600 leading-relaxed">تُنقّى الحبوب يدوياً أو عبر أحدث أجهزة السورتكس (Sortex) الإلكترونية، لإزالة الشوائب والحصول على حبة مثالية.</p>
+                    <h3 id="step-2-title" class="text-lg font-bold text-brand-dark mb-3">٢. الغربلة الآلية</h3>
+                    <p id="step-2-desc" class="text-sm text-gray-600 leading-relaxed">تُنقّى الحبوب عبر أحدث أجهزة الغربلة الآلية المتطورة لإزالة الشوائب والحصول على حبة مثالية جاهزة للطهي.</p>
                 </div>
-                <!-- step 3 -->
                 <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-lg bg-brand-dark/10 flex items-center justify-center text-brand-dark mb-6">
                         <i class="fa-solid fa-wind text-2xl"></i>
@@ -196,7 +189,6 @@
                     <h3 id="step-3-title" class="text-lg font-bold text-brand-dark mb-3">٣. التعقيم الكامل</h3>
                     <p id="step-3-desc" class="text-sm text-gray-600 leading-relaxed">تخضع جميع المواد لعمليات تعقيم دقيقة وطبيعية خالية من الكيماويات، للقضاء على أي كائنات دقيقة وحمايتها لأطول فترة.</p>
                 </div>
-                <!-- step 4 -->
                 <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 mb-6">
                         <i class="fa-solid fa-leaf text-2xl"></i>
@@ -211,42 +203,42 @@
     <!-- Product Catalog Section -->
     <section id="catalog" class="py-20 bg-brand-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
                 <div>
                     <span id="cat-badge" class="text-brand-red font-extrabold text-xs sm:text-sm uppercase tracking-widest block mb-2">تصفح أصنافنا</span>
                     <h2 id="cat-title" class="text-3xl sm:text-4xl font-extrabold text-brand-dark">كتالوج المنتجات</h2>
                     <div class="h-1 w-16 bg-brand-gold mt-4 rounded"></div>
                 </div>
-                <!-- Search & Filters -->
                 <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                    <div class="relative w-full sm:w-64">
-                        <input type="text" id="search-input" oninput="filterProducts()" placeholder="البحث عن منتج..." class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
+                    <div class="relative w-full sm:w-72">
+                        <input type="text" id="search-input" oninput="filterProducts()" placeholder="ابحث عن مجموعة أو صنف..." class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
                         <i class="fa-solid fa-magnifying-glass absolute right-3 top-3.5 text-gray-400 text-sm"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- Categories Filter -->
-            <div class="flex flex-wrap gap-2 mb-8 overflow-x-auto pb-2 scrollbar-hide" id="filters-container">
-                <button onclick="setCategory('all')" id="btn-all" class="bg-brand-red text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all active-filter">الكل</button>
-                <button onclick="setCategory('grains')" id="btn-grains" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">الحبوب والبقوليات</button>
-                <button onclick="setCategory('spices')" id="btn-spices" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">البهارات والخلطات</button>
-                <button onclick="setCategory('zaatar')" id="btn-zaatar" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">أعشاب وزعتر</button>
-                <button onclick="setCategory('mouneh')" id="btn-mouneh" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all">المونة والحلويات</button>
+            <!-- 8 Main Categories Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mb-8 pb-2" id="filters-container">
+                <button onclick="setCategory('all')" id="btn-all" class="bg-brand-red text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">الكل</button>
+                <button onclick="setCategory('grains')" id="btn-grains" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">الحبوب والبقوليات</button>
+                <button onclick="setCategory('flour')" id="btn-flour" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">طحين ولوازم حلويات</button>
+                <button onclick="setCategory('herbs')" id="btn-herbs" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">أعشاب ومونة بلدية</button>
+                <button onclick="setCategory('instant')" id="btn-instant" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">علب سريعة التحضير</button>
+                <button onclick="setCategory('misc')" id="btn-misc" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">أصناف متفرقة</button>
+                <button onclick="setCategory('spices_pouch')" id="btn-spices_pouch" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">بهارات ظرف</button>
+                <button onclick="setCategory('spices_jar')" id="btn-spices_jar" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">بهارات مرطبان</button>
+                <button onclick="setCategory('spices_bulk')" id="btn-spices_bulk" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all">بهارات فلت</button>
             </div>
 
-            <!-- Products Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="products-grid">
-                <!-- Products will be generated by JavaScript -->
-            </div>
+            <!-- Product Groups Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="products-grid"></div>
         </div>
     </section>
 
-    <!-- wholesale & Contact Section -->
+    <!-- Wholesale & Contact Section -->
     <section id="contact" class="py-20 bg-brand-clay border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Info -->
                 <div id="contact-info-container">
                     <h2 id="contact-title" class="text-3xl font-extrabold text-brand-dark mb-4 border-r-4 border-brand-red pr-4">تواصل معنا الآن</h2>
                     <p id="contact-desc" class="text-gray-600 mb-8">إذا كنت سوبر ماركت، مطعم، أو موزع، نحن نؤمن احتياجاتك من الحبوب والبهارات بأفضل جودة وأسعار تنافسية. تواصل مع قسم المبيعات للحصول على عروض مخصصة.</p>
@@ -267,7 +259,7 @@
                             </div>
                             <div>
                                 <h4 id="call-phone" class="font-bold text-brand-dark">الهاتف الأرضي</h4>
-                                <a href="tel:01123456" class="text-gray-600 hover:text-blue-600 transition-colors">01 556058</a>
+                                <a href="tel:01123456" class="text-gray-600 hover:text-blue-600 transition-colors">01 123 456</a>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -276,13 +268,12 @@
                             </div>
                             <div>
                                 <h4 id="call-loc" class="font-bold text-brand-dark">العنوان</h4>
-                                <p id="call-loc-detail" class="text-gray-600">لبنان، بيروت - الشويفات، قرب محطة الريشاني </p>
+                                <p id="call-loc-detail" class="text-gray-600">لبنان، بيروت - الشويفات، قرب محطة الريشاني</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Form -->
                 <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm" id="form-container">
                     <h3 id="form-title" class="text-xl font-bold text-brand-dark mb-6">طلب عرض أسعار جملة</h3>
                     <form onsubmit="handleFormSubmit(event)" class="space-y-4">
@@ -311,20 +302,18 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-center border-b border-gray-800 pb-8">
                 <div class="flex items-center gap-3 justify-center md:justify-start">
                     <div class="h-20 w-20 overflow-hidden flex items-center justify-center shrink-0">
-                        <img src="image_4.png" alt="حلباوي Logo" class="w-full h-full object-contain" style="transform: scale(1.2);">
+                        <img src="image_4.png" alt="حلباوي Logo" class="w-full h-full object-contain" style="transform: scale(4.2);">
                     </div>
                     <div>
                         <span id="footer-title" class="block font-bold text-lg text-amber-50 leading-tight">حلباوي إخوان</span>
                         <span id="footer-sub" class="block text-xs text-brand-gold">منذ ١٩٨٢ | دائماً في الطليعة</span>
                     </div>
                 </div>
-                <!-- Nav Links -->
                 <div class="flex gap-4 justify-center text-sm font-medium text-gray-400">
                     <a href="#about" id="foot-about" class="hover:text-white transition-colors">من نحن</a>
                     <a href="#journey" id="foot-journey" class="hover:text-white transition-colors">رحلة الجودة</a>
                     <a href="#catalog" id="foot-catalog" class="hover:text-white transition-colors">منتجاتنا</a>
                 </div>
-                <!-- Social Media -->
                 <div class="flex gap-4 justify-center md:justify-end text-xl">
                     <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" class="hover:text-brand-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
@@ -338,20 +327,28 @@
         </div>
     </footer>
 
-    <!-- Image Modal for zoom View -->
-    <div id="product-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/80 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 bg-brand-dark/50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors z-10">
-                <i class="fa-solid fa-xmark"></i>
+    <!-- Group Details Modal -->
+    <div id="product-modal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onclick="if(event.target === this) closeModal()">
+        <div class="bg-white rounded-2xl max-w-xl w-full overflow-hidden shadow-2xl transform transition-all relative flex flex-col max-h-[90vh]">
+            <button onclick="closeModal()" class="absolute top-3 left-3 bg-brand-dark/70 text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-            <img id="modal-img" src="" alt="صورة المنتج" class="w-full h-64 object-cover">
-            <div class="p-6">
+            <div class="relative h-48 sm:h-56 bg-gray-100 shrink-0">
+                <img id="modal-img" src="" alt="صورة المجموعة" class="w-full h-full object-cover">
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col overflow-hidden">
                 <span id="modal-category" class="text-xs font-bold text-brand-gold uppercase tracking-widest block mb-1">القسم</span>
-                <h3 id="modal-title" class="text-2xl font-extrabold text-brand-dark mb-2">اسم المنتج</h3>
-                <p id="modal-description" class="text-gray-600 text-sm leading-relaxed mb-6">تفاصيل المنتج والوزن والتحضير</p>
-                <div class="flex gap-3">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <h3 id="modal-title" class="text-2xl font-extrabold text-brand-dark">اسم المجموعة</h3>
+                    <span id="modal-count" class="text-xs font-bold bg-brand-clay text-brand-red px-2.5 py-1 rounded-full"></span>
+                </div>
+                
+                <!-- Scrollable Items List -->
+                <div id="modal-items-list" class="overflow-y-auto custom-scroll space-y-2 mb-5 pr-1 flex-1 border-t border-b border-gray-100 py-3"></div>
+
+                <div class="flex gap-3 shrink-0">
                     <a id="modal-whatsapp-btn" href="" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-center font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition-colors">
-                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span id="modal-wa-text">استفسر بالواتساب</span>
                     </a>
                     <button onclick="closeModal()" id="modal-close-btn" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold px-5 rounded-lg transition-colors">إغلاق</button>
@@ -360,12 +357,35 @@
         </div>
     </div>
 
-    <!-- Website Translation & Catalog Data Javascript -->
     <script>
         let currentLang = 'ar';
         let currentCategory = 'all';
 
-        // Translation Data
+        const categoryLabels = {
+            ar: {
+                all: 'الكل',
+                grains: 'الحبوب والبقوليات',
+                flour: 'طحين ولوازم حلويات',
+                herbs: 'أعشاب ومونة بلدية',
+                instant: 'علب سريعة التحضير',
+                misc: 'أصناف متفرقة',
+                spices_pouch: 'بهارات ظرف',
+                spices_jar: 'بهارات مرطبان',
+                spices_bulk: 'بهارات فلت'
+            },
+            en: {
+                all: 'All',
+                grains: 'Grains & Pulses',
+                flour: 'Flour & Baking',
+                herbs: 'Herbs & Mouneh',
+                instant: 'Instant Boxes',
+                misc: 'Miscellaneous',
+                spices_pouch: 'Pouch Spices',
+                spices_jar: 'Jar Spices',
+                spices_bulk: 'Bulk Spices'
+            }
+        };
+
         const translations = {
             ar: {
                 promoBar: '🌾 منتوجاتنا دائماً في الطليعة - منذ ١٩٨٢ | الجودة والأصالة في كل بيت 🌾',
@@ -373,7 +393,7 @@
                 navJourney: 'رحلة الجودة',
                 navCatalog: 'منتجاتنا',
                 navSub: 'تأسست عام ١٩٨٢',
-                heroBadge: ' في لبنان منذ ١٩٨٢ • أكثر من ٤٠ عاماً من الأصالة',
+                heroBadge: 'في لبنان منذ ١٩٨٢ • أكثر من ٤٠ عاماً من الأصالة',
                 heroTitle: 'أجود أنواع الحبوب والبهارات',
                 heroSubtitle: 'منتوجاتنا دائماً في الطليعة',
                 heroDescription: 'شركة حلباوي إخوان اسم ظهر في العام ١٩٨٢ وتشكل باتحاد إخوة، فاختاروا طريق الاختصاص في إنتاج أجود أنواع الحبوب والبهارات المستوردة من شتى أنحاء العالم وتعبئتها تحت أحسن الشروط الصحية بعد تعقيمها وغربلتها وتنقيتها لتكون جاهزة للطبخ وعلى موائدكم بأعلى معايير النقاء.',
@@ -389,20 +409,15 @@
                 journeyTitle: 'رحلة الجودة والتعقيم',
                 step1Title: '١. الاستيراد المباشر',
                 step1Desc: 'نستورد نخبة الحبوب والبهارات الخام مباشرة من موطنها الأصلي في مختلف أنحاء العالم، لضمان الطزاجة والجودة الفائقة.',
-                step2Title: '٢. الغربلة الاليه',
-                step2Desc: 'تُنقّى الحبوب يدوياً أو عبر أحدث أجهزة السورتكس (Sortex) الإلكترونية، لإزالة الشوائب والحصول على حبة مثالية.',
+                step2Title: '٢. الغربلة الآلية',
+                step2Desc: 'تُنقّى الحبوب عبر أحدث أجهزة الغربلة الآلية المتطورة لإزالة الشوائب والحصول على حبة مثالية جاهزة للطهي.',
                 step3Title: '٣. التعقيم الكامل',
                 step3Desc: 'تخضع جميع المواد لعمليات تعقيم دقيقة وطبيعية خالية من الكيماويات، للقضاء على أي كائنات دقيقة وحمايتها لأطول فترة.',
                 step4Title: '٤. طحن وخلط طازج',
                 step4Desc: 'نطحن البهارات فوراً ونحضّر الخلطات اللبنانية التراثية والسرّية بعناية فائقة لتصل موائدكم بكامل روائحها العطرة والشهية.',
                 catBadge: 'تصفح أصنافنا',
                 catTitle: 'كتالوج المنتجات',
-                searchPlaceholder: 'البحث عن منتج...',
-                catAll: 'الكل',
-                catGrains: 'الحبوب والبقوليات',
-                catSpices: 'البهارات والخلطات',
-                catZaatar: 'أعشاب وزعتر',
-                catMouneh: 'المونة والحلويات',
+                searchPlaceholder: 'ابحث عن مجموعة أو صنف...',
                 contactTitle: 'تواصل معنا الآن',
                 contactDesc: 'إذا كنت سوبر ماركت، مطعم، أو موزع، نحن نؤمن احتياجاتك من الحبوب والبهارات بأفضل جودة وأسعار تنافسية. تواصل مع قسم المبيعات للحصول على عروض مخصصة.',
                 callWa: 'واتساب مبيعات الجملة',
@@ -417,7 +432,9 @@
                 copyright: '© ٢٠٢٦ شركة حلباوي إخوان. جميع الحقوق محفوظة.',
                 builtBy: 'بُني بكل فخر في لبنان 🇱🇧',
                 modalWaText: 'استفسر بالواتساب',
-                modalClose: 'إغلاق'
+                modalClose: 'إغلاق',
+                itemsWord: 'أصناف',
+                viewItems: 'عرض الأصناف'
             },
             en: {
                 promoBar: '🌾 Our Products Always at the Forefront - Since 1982 | Quality & Authenticity in Every Home 🌾',
@@ -428,12 +445,12 @@
                 heroBadge: 'In Lebanon Since 1982 • Over 40 Years of Heritage',
                 heroTitle: 'Premium Grains & Spices',
                 heroSubtitle: 'Our Products Always at the Forefront',
-                heroDescription: 'Helbawi Bros is a name that emerged in 1982 as a union of brothers who dedicated themselves to producing the finest natural grains and spices imported from all around the world. Prepared with manual expertise and electronic Sortex sorting, sterilizing, and grinding, we deliver quality ready for your kitchen under optimal health conditions.',
+                heroDescription: 'Helbawi Bros emerged in 1982 as a union of brothers dedicated to producing the finest natural grains and spices imported worldwide. Prepared with automated sifting, sterilization, and fresh grinding under optimal health standards.',
                 heroPrimary: 'Browse Products',
                 heroSecondary: 'Wholesale Inquiry',
                 aboutTitle: 'About Us',
-                aboutP1: 'Founded in 1982 in Lebanon, <strong>Helbawi Bros</strong> has become a name synonymous with quality, trust, and distinction. Our journey began as a family mission, uniting brothers around one goal: bringing the finest natural grains, spices, and seasonings to the Lebanese and Arab consumer using traditional, manual skills.',
-                aboutP2: 'Over the decades, we integrated modernity, adopting the <strong>latest Sortex electronic sorting and sterilization</strong> methods to guarantee zero impurities while preserving natural rich flavors. We do not just sell dry foods; we offer the authentic taste chefs trust and families rely on.',
+                aboutP1: 'Founded in 1982 in Lebanon, <strong>Helbawi Bros</strong> has become synonymous with quality, trust, and distinction. Our journey began as a family mission to bring the finest natural grains, spices, and seasonings to the Lebanese and Arab consumer.',
+                aboutP2: 'Over the decades, we integrated modernity, adopting the <strong>latest automated sifting and sterilization</strong> methods to guarantee zero impurities while preserving natural rich flavors.',
                 statSince: 'Year Founded',
                 statYears: 'Years of Experience',
                 statItems: 'Featured Products',
@@ -442,21 +459,16 @@
                 step1Title: '1. Direct Sourcing',
                 step1Desc: 'We source premier grains and raw spices directly from their origin countries globally, securing unmatched freshness and high grades.',
                 step2Title: '2. Automated Sifting',
-                step2Desc: 'All materials are cleaned manually and processed using state-of-the-art Sortex optical sorting machines to remove natural debris.',
+                step2Desc: 'All materials are cleaned and processed using advanced automated sifting machines to remove impurities and ensure perfect grains.',
                 step3Title: '3. Natural Sterilization',
                 step3Desc: 'Products undergo advanced, chemical-free sterilization steps to preserve nutritional density while destroying microbial load.',
                 step4Title: '4. Fresh Grinding & Blending',
                 step4Desc: 'Spices are ground upon request. We craft our heritage-blended Lebanese recipes in-house, securing potent flavors.',
-                catBadge: 'Browse our Category',
+                catBadge: 'Browse our Catalog',
                 catTitle: 'Product Catalog',
-                searchPlaceholder: 'Search products...',
-                catAll: 'All',
-                catGrains: 'Grains & Pulses',
-                catSpices: 'Spices & Blends',
-                catZaatar: 'Herbs & Zaatar',
-                catMouneh: 'Mouneh & Sweet Mixes',
+                searchPlaceholder: 'Search groups or items...',
                 contactTitle: 'Contact Us Now',
-                contactDesc: 'If you are a supermarket, restaurant, or distributor, we secure your grain and spice needs at top quality and competitive wholesale rates. Connect with Sales for customized offers.',
+                contactDesc: 'If you are a supermarket, restaurant, or distributor, we secure your grain and spice needs at top quality and competitive wholesale rates.',
                 callWa: 'Wholesale WhatsApp',
                 callPhone: 'Phone Line',
                 callLoc: 'Location',
@@ -469,188 +481,605 @@
                 copyright: '© 2026 Helbawi Bros. All rights reserved.',
                 builtBy: 'Proudly built in Lebanon 🇱🇧',
                 modalWaText: 'Inquire on WhatsApp',
-                modalClose: 'Close'
+                modalClose: 'Close',
+                itemsWord: 'Items',
+                viewItems: 'View Items'
             }
         };
 
-        // Product Data
-        const products = [
-            // Grains
+        // Complete Hierarchical Product Groups (22 Groups across 8 Categories)
+        const productGroups = [
+            // ================= 1. الحبوب والبقوليات (Grains) =================
             {
                 id: 1,
                 category: 'grains',
-                name_ar: 'عدس مجروش',
-                name_en: 'Crushed Orange Lentils',
-                desc_ar: 'عدس أحمر مجروش فاخر، منقى ومغربل يدوياً وإلكترونياً عبر السورتكس. سريع الطهي ومثالي للشوربة اليومية اللبنانية.',
-                desc_en: 'Premium red crushed lentils, carefully sifted manually and through electronic Sortex. Cooks quickly, ideal for traditional soup.',
-                packaging_ar: 'مغلف مفرغ ٩٠٧ غرام / شوالات جملة',
-                packaging_en: '907g vacuum pack / wholesale sacks',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                name_ar: 'حمص',
+                name_en: 'Chickpeas',
+                img: 'hommos.jpg',
+                items: [
+                    { ar: 'حمص 9', en: 'Chickpeas Size 9', weight: '907g' },
+                    { ar: 'حمص 12', en: 'Chickpeas Size 12', weight: '907g' },
+                    { ar: 'حمص كسر', en: 'Split Chickpeas', weight: '1000g' }
+                ]
             },
             {
                 id: 2,
                 category: 'grains',
-                name_ar: 'حمص فحلي',
-                name_en: 'Chickpeas Fahli',
-                desc_ar: 'حمص فحلي عريض، حبة ممتازة مستوردة ومغسولة وتنقيتها خالية من الشوائب. ممتاز للفرقع والطهي والتسقية اللبنانية.',
-                desc_en: 'Extralarge Fahli chickpeas, premium grade, washed and sorted. Perfect for boiling, making hummus, and traditional stews.',
-                packaging_ar: 'مغلف مفرغ ٩٠٧ غرام / شوالات جملة',
-                packaging_en: '907g vacuum pack / wholesale sacks',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                name_ar: 'فول',
+                name_en: 'Fava Beans',
+                img: 'foul.jpg',
+                items: [
+                    { ar: 'فول حب', en: 'Whole Fava Beans', weight: '907g' },
+                    { ar: 'فول مجروش', en: 'Crushed Fava Beans', weight: '1000g' },
+                    { ar: 'فول عريض', en: 'Broad Fava Beans', weight: '500g / 1000g' }
+                ]
             },
             {
                 id: 3,
                 category: 'grains',
-                name_ar: 'فاصوليا بيضاء',
-                name_en: 'Lima Beans',
-                desc_ar: 'فاصوليا بيضاء يابسة (حبة متوسطة وعريضة)، منقاة بالكامل وسريعة النضج ومثالية لليخنات والطهي الشرقي.',
-                desc_en: 'Dry white Lima beans (medium and large size), fully sifted, quick to cook, and perfect for rich stews.',
-                packaging_ar: 'مغلف ٥٠٠ غرام / شوالات جملة',
-                packaging_en: '500g pouch / wholesale sacks',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                name_ar: 'فاصولياء',
+                name_en: 'Beans',
+                img: 'fasolia.jpg',
+                items: [
+                    { ar: 'فاصولياء صنوبرية', en: 'White Navy Beans', weight: '907g' },
+                    { ar: 'فاصولياء حمراء', en: 'Red Kidney Beans', weight: '1000g' },
+                    { ar: 'فاصولياء عريضة', en: 'Broad White Beans (Lima)', weight: '500g / 1000g' }
+                ]
             },
             {
                 id: 4,
                 category: 'grains',
-                name_ar: 'طحين فاخر',
-                name_en: 'Flour Extra Quality',
-                desc_ar: 'طحين عالي الجودة لجميع الاستخدامات (Good Medal / Good Mark) من القمح الممتاز، مثالي للحلويات والمعجنات والمناقيش.',
-                desc_en: 'Premium all-purpose flour (Good Medal / Good Mark) from top grade wheat, perfect for desserts, baking, and traditional manakish.',
-                packaging_ar: 'مغلفات ورقية ١ كغ و٢ كغ',
-                packaging_en: '1kg & 2kg paper packs',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                name_ar: 'عدس',
+                name_en: 'Lentils',
+                img: 'adas.jpg',
+                items: [
+                    { ar: 'عدس أبيض رفيع', en: 'Fine White Lentils', weight: '907g' },
+                    { ar: 'عدس أحمر', en: 'Red Lentils', weight: '907g' },
+                    { ar: 'عدس أحمر موردي', en: 'Mouradi Red Lentils', weight: '907g' },
+                    { ar: 'عدس مجروش', en: 'Crushed Lentils', weight: '907g' },
+                    { ar: 'عدس عريض', en: 'Large Green/Brown Lentils', weight: '907g' }
+                ]
             },
-            // Spices
             {
                 id: 5,
-                category: 'spices',
-                name_ar: 'السبع بهارات',
-                name_en: 'Seven Spices',
-                desc_ar: 'الخلطة اللبنانية الأصلية، توليفة غنية من البهارات الخام المطحونة طازجاً (قرفة، بهار، قرنفل، جوزة الطيب، فلفل، كزبرة، زنجبيل).',
-                desc_en: 'The authentic Lebanese blend, a rich recipe of freshly ground spices (cinnamon, pepper, cloves, nutmeg, allspice, coriander, ginger).',
-                packaging_ar: 'علب ومرطبانات وأكياس مخصصة',
-                packaging_en: 'Pouches, jars, and customized retail bags',
-                img: 'image_13.png'
+                category: 'grains',
+                name_ar: 'برغل',
+                name_en: 'Burghul',
+                img: 'burghul.jpg',
+                items: [
+                    { ar: 'برغل أسمر ناعم', en: 'Fine Dark Burghul', weight: '907g' },
+                    { ar: 'برغل أسمر خشن', en: 'Coarse Dark Burghul', weight: '907g' },
+                    { ar: 'برغل أشقر ناعم', en: 'Fine Blonde Burghul', weight: '907g' },
+                    { ar: 'برغل أشقر خشن', en: 'Coarse Blonde Burghul', weight: '907g' }
+                ]
             },
             {
                 id: 6,
-                category: 'spices',
-                name_ar: 'كمون ناعم',
-                name_en: 'Cumin Fine',
-                desc_ar: 'كمون خام من الدرجة الأولى، مطحون فوراً بعد الغربلة والتعقيم ليحتفظ بزيته الطيار ورائحته النفاذة التي تضفي نكهة أصلية.',
-                desc_en: 'Premium cumin seeds, freshly ground after thorough sifting and sterilization to preserve its natural essential oils.',
-                packaging_ar: 'ظرف ٥٠ غرام / مرطبانات ووزن جملة',
-                packaging_en: '50g pouches / jars & bulk bags',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                category: 'grains',
+                name_ar: 'أرز',
+                name_en: 'Rice',
+                img: 'roz.jpg',
+                items: [
+                    { ar: 'أرز أمريكي', en: 'American Rice', weight: '907g' },
+                    { ar: 'أرز إيطالي', en: 'Italian Rice', weight: '907g' },
+                    { ar: 'أرز مصري', en: 'Egyptian Rice', weight: '907g' },
+                    { ar: 'أرز ناعم', en: 'Ground Rice', weight: '500g / 1000g' },
+                    { ar: 'أرز بسمتي', en: 'Basmati Rice', weight: '907g' },
+                    { ar: 'أرز عنبري', en: 'Anbari Rice', weight: '1kg' }
+                ]
             },
+
+            // ================= 2. طحين ولوازم حلويات (Flour & Baking) =================
             {
                 id: 7,
-                category: 'spices',
-                name_ar: 'بهار الكبة',
-                name_en: 'Kibbeh Spices',
-                desc_ar: 'خلطة سرّية وتراثية مميزة من حلباوي إخوان، مصممة خصيصاً لإعطاء الكبة اللبنانية النكهة والرائحة العطرة الأصيلة.',
-                desc_en: 'A secret heritage blend from Helbawi Bros, specifically crafted to give traditional Lebanese Kibbeh its genuine, aromatic flavor.',
-                packaging_ar: 'أكياس وعلب بهارات مخصصة',
-                packaging_en: 'Retail spice pouches and boxes',
-                img: 'image_13.png'
+                category: 'flour',
+                name_ar: 'طحين',
+                name_en: 'Flour & Semolina',
+                img: 'tahin.jpg',
+                items: [
+                    { ar: 'طحين فرخة', en: 'Fine Semolina (Farkha)', weight: '907g' },
+                    { ar: 'سميد', en: 'Semolina', weight: '907g' },
+                    { ar: 'طحين غود ميدل', en: 'Good Medal Flour', weight: '1kg' },
+                    { ar: 'طحين غود مارك', en: 'Good Mark Flour', weight: '907g' },
+                    { ar: 'طحين زيرو', en: 'Zero Flour', weight: '1kg' },
+                    { ar: 'طحين فقش', en: 'Faksh Flour', weight: '1kg' },
+                    { ar: 'طحين قمحة كاملة', en: 'Whole Wheat Flour', weight: '1kg' },
+                    { ar: 'طحين أسمر', en: 'Brown Flour', weight: '1kg' },
+                    { ar: 'طحين ذرة', en: 'Corn Flour', weight: '1kg' }
+                ]
             },
             {
                 id: 8,
-                category: 'spices',
-                name_ar: 'فلفل أحمر (عقدة حمراء)',
-                name_en: 'Red Pepper',
-                desc_ar: 'فلفل أحمر ناعم (حار أو حلو) محضر من أجود قرون الفلفل المجففة والمطحونة، بلون طبيعي مشع وطعم غني وشهي.',
-                desc_en: 'Fine red pepper (hot or sweet) ground from selected dried red peppers, boasting a natural vibrant color and rich spice.',
-                packaging_ar: 'ظرف ٥٠ غرام / مرطبانات ووزن جملة',
-                packaging_en: '50g pouches / jars & bulk bags',
-                img: 'image_13.png'
+                category: 'flour',
+                name_ar: 'سكر',
+                name_en: 'Sugar',
+                img: 'sokar.jpg',
+                items: [
+                    { ar: 'سكر حب', en: 'Granulated Sugar', weight: '907g' },
+                    { ar: 'سكر أسمر', en: 'Brown Sugar', weight: '1000g' },
+                    { ar: 'سكر ناعم', en: 'Powdered Sugar', weight: '500g / 1000g' },
+                    { ar: 'سكر نبات', en: 'Rock Candy Sugar', weight: '100g / 500g / 1000g' }
+                ]
             },
-            // Zaatar & Herbs
             {
                 id: 9,
-                category: 'zaatar',
-                name_ar: 'زعتر لبناني بلدي',
-                name_en: 'Lebanese Baladi Zaatar',
-                desc_ar: 'خلطة الزعتر البلدي اللبناني الشهير، مجهزة من الزعتر البري مع السمسم المحمص الفاخر والسماق البلدي الحمضي.',
-                desc_en: 'Famous traditional Lebanese Zaatar, prepared with wild thyme, premium roasted sesame, and tangy Baladi sumac.',
-                packaging_ar: 'أكياس عائلية ومغلفات ٤٠٠ غرام',
-                packaging_en: '400g retail & family packs',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                category: 'flour',
+                name_ar: 'سمسم',
+                name_en: 'Sesame',
+                img: 'semsem.jpg',
+                items: [
+                    { ar: 'سمسم مقشور', en: 'Hulled Sesame', weight: '100g / 200g / 500g' },
+                    { ar: 'سمسم محمص', en: 'Roasted Sesame', weight: '100g / 200g / 500g' },
+                    { ar: 'سمسم محمص بلدي', en: 'Baladi Roasted Sesame', weight: '100g / 200g / 500g' }
+                ]
             },
             {
                 id: 10,
-                category: 'zaatar',
-                name_ar: 'ملوخية بلدي يابسة',
-                name_en: 'Dried Molokhia',
-                desc_ar: 'أوراق ملوخية طبيعية مجففة ومنقاة بالكامل يدوياً من الأعواد، بلون أخضر نضر ورائحة طيبة جاهزة للطهي المباشر.',
-                desc_en: 'Natural dried Molokhia leaves, manually destemmed and sifted, boasting a fresh green color and excellent earthy flavor.',
-                packaging_ar: 'أكياس خفيفة الوزن بأحجام متعددة',
-                packaging_en: 'Lightweight packs in multiple sizes',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                category: 'flour',
+                name_ar: 'نشاء',
+                name_en: 'Starch',
+                img: 'nasha.jpg',
+                items: [
+                    { ar: 'نشاء ناعم', en: 'Fine Corn Starch', weight: '200g / 500g / 1000g' },
+                    { ar: 'نشاء حب', en: 'Lump Starch', weight: '200g / 500g / 1000g' }
+                ]
             },
-            // Mouneh
             {
                 id: 11,
-                category: 'mouneh',
-                name_ar: 'كشك بلدي طبيعي',
-                name_en: 'Traditional Baladi Kishk',
-                desc_ar: 'كشك بلدي لبناني أصيل، محضر من البرغل المطحون المخمر مع لبن الماعز والبلدي وتجفيفه تحت أشعة الشمس الجبلية.',
-                desc_en: 'Authentic Lebanese Kishk, made from cracked wheat (burghul) fermented with natural goat/cow yogurt and sun-dried.',
-                packaging_ar: 'أكياس ومغلفات ٥٠٠ غرام',
-                packaging_en: '500g pouches & traditional sacks',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                category: 'flour',
+                name_ar: 'لوازم حلويات مختلفة',
+                name_en: 'Baking Supplies',
+                img: 'halawiyat.jpg',
+                items: [
+                    { ar: 'برش جوز الهند', en: 'Shredded Coconut', weight: '200g / 500g' },
+                    { ar: 'كاكاو', en: 'Cocoa Powder', weight: '200g / 500g' },
+                    { ar: 'فرميسال ملون', en: 'Colored Sprinkles', weight: '200g' },
+                    { ar: 'فرميسال شوكولا', en: 'Chocolate Sprinkles', weight: '200g' }
+                ]
             },
+
+            // ================= 3. أصناف متفرقة (Misc) =================
             {
                 id: 12,
-                category: 'mouneh',
-                name_ar: 'علب سحلب ومغلي',
-                name_en: 'Sahlab & Meghli Boxes',
-                desc_ar: 'علب خلطات السحلب والمغلي التراثية الجاهزة، خلطة غنية وسريعة التحضير بالنكهة اللبنانية الغنية والمحبوبة بالضيافات.',
-                desc_en: 'Ready mix Meghli and Sahlab boxes, heavily flavored and rich. Quick to prepare, offering traditional festive hospitality flavors.',
-                packaging_ar: 'علب كرتونية جاهزة مع التوابل',
-                packaging_en: 'Ready cardboard retail boxes',
-                img: 'watermarked_img_17000710410433381755.jpg'
+                category: 'misc',
+                name_ar: 'قمح وفريكة',
+                name_en: 'Wheat & Freekeh',
+                img: 'qamh.jpg',
+                items: [
+                    { ar: 'قمح مقشور', en: 'Peeled Wheat', weight: '907g' },
+                    { ar: 'قمح بقشره', en: 'Whole Wheat', weight: '907g' },
+                    { ar: 'فريك مجروش', en: 'Crushed Freekeh', weight: '500g / 1000g' }
+                ]
+            },
+            {
+                id: 13,
+                category: 'misc',
+                name_ar: 'ترمس / ذرة / مغربية',
+                name_en: 'Lupini / Corn / Moghrabieh',
+                img: 'tormos_dora.jpg',
+                items: [
+                    { ar: 'ترمس حلو', en: 'Sweet Lupini Beans', weight: '500g / 1000g' },
+                    { ar: 'ترمس مر', en: 'Bitter Lupini Beans', weight: '500g / 1000g' },
+                    { ar: 'ذرة بوشار', en: 'Popcorn Kernels', weight: '500g / 1000g' },
+                    { ar: 'ذرة مجروشة', en: 'Crushed Corn', weight: '500g / 1000g' },
+                    { ar: 'مغربية', en: 'Moghrabieh', weight: '907g' }
+                ]
+            },
+
+            // ================= 4. أعشاب ومونة بلدية (Herbs & Mouneh) =================
+            {
+                id: 14,
+                category: 'herbs',
+                name_ar: 'زعتر',
+                name_en: 'Zaatar',
+                img: 'zaatar.jpg',
+                items: [
+                    { ar: 'زعتر محوج', en: 'Mixed Zaatar', weight: '200g / 500g / 1000g' },
+                    { ar: 'زعتر محوج إكسترا', en: 'Extra Mixed Zaatar', weight: '200g / 500g / 1000g' },
+                    { ar: 'زعتر حلبي', en: 'Aleppo Zaatar', weight: '200g / 500g / 1000g' },
+                    { ar: 'زعتر ورق', en: 'Dried Thyme Leaves', weight: '200g / 500g / 1000g' }
+                ]
+            },
+            {
+                id: 15,
+                category: 'herbs',
+                name_ar: 'مونة بلدية',
+                name_en: 'Local Mouneh',
+                img: 'mouneh.jpg',
+                items: [
+                    { ar: 'كشك بلدي', en: 'Baladi Kishk', weight: '200g / 500g / 1000g' },
+                    { ar: 'بامية يابسة', en: 'Dried Okra', weight: '200g' },
+                    { ar: 'ملوخية يابسة', en: 'Dried Molokhia', weight: '200g' }
+                ]
+            },
+            {
+                id: 16,
+                category: 'herbs',
+                name_ar: 'زهورات وبزور صحية',
+                name_en: 'Herbal Teas & Healthy Seeds',
+                img: 'zohourat_bozour.jpg',
+                items: [
+                    { ar: 'زهورات مشكلة', en: 'Mixed Herbal Tea (Zhourat)', weight: '100g / 200g / 500g' },
+                    { ar: 'بابونج', en: 'Chamomile', weight: '100g' },
+                    { ar: 'بزر شيا', en: 'Chia Seeds', weight: '200g' },
+                    { ar: 'بزر كتان', en: 'Flax Seeds', weight: '200g / 500g' },
+                    { ar: 'بزر كينوا', en: 'Quinoa Seeds', weight: '200g' },
+                    { ar: 'بزر رشاد', en: 'Garden Cress Seeds', weight: '200g' },
+                    { ar: 'بزر لقطين', en: 'Pumpkin Seeds', weight: '200g' },
+                    { ar: 'بزر دوار الشمس', en: 'Sunflower Seeds', weight: '200g' },
+                    { ar: 'شوفان مبروش', en: 'Rolled Oats', weight: '500g' }
+                ]
+            },
+
+            // ================= 5. علب سريعة التحضير (Instant Boxes) =================
+            {
+                id: 17,
+                category: 'instant',
+                name_ar: 'علب سريعة التحضير',
+                name_en: 'Instant Mix Boxes',
+                img: 'instant_boxes.jpg',
+                items: [
+                    { ar: 'مغلي جاهز', en: 'Instant Meghli', weight: '500g' },
+                    { ar: 'مغلي بدون سكر', en: 'Sugar-Free Meghli', weight: 'Box' },
+                    { ar: 'سحلب', en: 'Sahlab Mix', weight: '500g' },
+                    { ar: 'فلافل', en: 'Falafel Mix', weight: '200g' },
+                    { ar: 'خلطة كرسبي', en: 'Crispy Coating Mix', weight: '500g' },
+                    { ar: 'خلطة بروستد', en: 'Broasted Coating Mix', weight: '500g' }
+                ]
+            },
+
+            // ================= 6. بهارات ظرف (Pouch Spices) =================
+            {
+                id: 18,
+                category: 'spices_pouch',
+                name_ar: 'بهارات أساسية (ظرف)',
+                name_en: 'Basic Spices (Pouches)',
+                img: 'spices_basic_pouch.jpg',
+                items: [
+                    { ar: 'بهار حلو', en: 'Allspice', weight: '50g × 12' },
+                    { ar: 'فلفل أسود', en: 'Black Pepper', weight: '50g × 12' },
+                    { ar: 'فلفل أحمر', en: 'Red Pepper', weight: '50g × 12' },
+                    { ar: 'قرفة ناعمة', en: 'Ground Cinnamon', weight: '50g × 12' },
+                    { ar: 'سبع بهارات', en: 'Seven Spices', weight: '50g × 12' },
+                    { ar: 'دقة كعك', en: 'Kaak Spice Mix', weight: '50g × 12' },
+                    { ar: 'كمون', en: 'Cumin', weight: '50g × 12' },
+                    { ar: 'كزبرة', en: 'Coriander', weight: '50g × 12' },
+                    { ar: 'كراوية', en: 'Caraway', weight: '50g × 12' },
+                    { ar: 'كاري', en: 'Curry', weight: '50g × 12' },
+                    { ar: 'سماق', en: 'Sumac', weight: '50g × 12' },
+                    { ar: 'يانسون ناعم', en: 'Ground Anise', weight: '50g × 12' },
+                    { ar: 'عقدة صفراء (كركم)', en: 'Turmeric', weight: '50g × 12' },
+                    { ar: 'فليفلة حلوة', en: 'Sweet Red Pepper', weight: '50g × 12' },
+                    { ar: 'حامض الليمون', en: 'Citric Acid', weight: '50g × 12' },
+                    { ar: 'ثوم مجفف', en: 'Garlic Powder', weight: '50g × 12' },
+                    { ar: 'بصل مجفف بودرة', en: 'Onion Powder', weight: '50g × 12' },
+                    { ar: 'زعتر أوريغانو', en: 'Oregano', weight: '50g × 12' },
+                    { ar: 'بابريكا', en: 'Paprika', weight: '50g × 12' },
+                    { ar: 'شومر', en: 'Fennel', weight: '50g × 12' },
+                    { ar: 'حلبة', en: 'Fenugreek', weight: '50g × 12' },
+                    { ar: 'جوز الطيب ناعم', en: 'Ground Nutmeg', weight: '20g × 12' },
+                    { ar: 'محلب ناعم', en: 'Ground Mahlab', weight: '20g × 12' },
+                    { ar: 'نعنع يابس', en: 'Dried Mint', weight: '20g × 12' },
+                    { ar: 'مردكوش', en: 'Marjoram', weight: '20g × 12' },
+                    { ar: 'قرنفل ناعم', en: 'Ground Cloves', weight: '20g × 12' },
+                    { ar: 'بهار أبيض ناعم', en: 'Ground White Pepper', weight: '20g × 12' },
+                    { ar: 'هال ناعم', en: 'Ground Cardamom', weight: '20g × 12' },
+                    { ar: 'زنجبيل ناعم', en: 'Ground Ginger', weight: '20g × 12' }
+                ]
+            },
+            {
+                id: 19,
+                category: 'spices_pouch',
+                name_ar: 'بهارات خلطات (ظرف)',
+                name_en: 'Spice Blends (Pouches)',
+                img: 'spices_blends_pouch.jpg',
+                items: [
+                    { ar: 'دقة كبة ناعمة', en: 'Fine Kibbeh Spice', weight: '50g × 12' },
+                    { ar: 'بهار فلافل', en: 'Falafel Spice', weight: '50g × 12' },
+                    { ar: 'بهار مغربية', en: 'Moghrabieh Spice', weight: '50g × 12' },
+                    { ar: 'بهار كبسة', en: 'Kabsa Spice', weight: '50g × 12' },
+                    { ar: 'بهار دجاج', en: 'Chicken Spice', weight: '50g × 12' },
+                    { ar: 'بهار طاووق', en: 'Tawook Spice', weight: '50g × 12' },
+                    { ar: 'بهار بيتزا', en: 'Pizza Spice', weight: '50g × 12' },
+                    { ar: 'بهار همبرغر', en: 'Burger Spice', weight: '50g × 12' },
+                    { ar: 'بهار شاورما لحمة', en: 'Beef Shawarma Spice', weight: '50g × 12' },
+                    { ar: 'بهار شاورما دجاج', en: 'Chicken Shawarma Spice', weight: '50g × 12' },
+                    { ar: 'بهار كفتة', en: 'Kafta Spice', weight: '50g × 12' },
+                    { ar: 'بهار سمك', en: 'Fish Spice', weight: '50g × 12' },
+                    { ar: 'بهار سجق', en: 'Sujuk Spice', weight: '50g × 12' },
+                    { ar: 'بهار كنتاكي', en: 'Kentucky Spice', weight: '50g × 12' },
+                    { ar: 'بهار مقانق', en: 'Makanek Spice', weight: '50g × 12' },
+                    { ar: 'بهار فاهيتا', en: 'Fajita Spice', weight: '50g × 12' },
+                    { ar: 'بهار فيلادلفيا', en: 'Philadelphia Spice', weight: '50g × 12' },
+                    { ar: 'بهار مشاوي', en: 'Grill / BBQ Spice', weight: '50g × 12' },
+                    { ar: 'بهار برياني', en: 'Biryani Spice', weight: '50g × 12' },
+                    { ar: 'بهار إسكالوب دجاج', en: 'Chicken Escalope Spice', weight: '50g × 12' },
+                    { ar: 'بهار بروستد', en: 'Broasted Spice', weight: '50g × 12' },
+                    { ar: 'بهار كرسبي', en: 'Crispy Spice', weight: '50g × 12' },
+                    { ar: 'بهار فرنسيسكو', en: 'Francisco Spice', weight: '50g × 12' },
+                    { ar: 'بهار ناغتس', en: 'Nuggets Spice', weight: '50g × 12' },
+                    { ar: 'بهار أرز', en: 'Rice Spice', weight: '50g × 12' },
+                    { ar: 'بهار تطبيقة', en: 'Tatbiqa Spice', weight: '50g × 12' },
+                    { ar: 'بهار صيني', en: 'Chinese Spice', weight: '50g × 12' },
+                    { ar: 'بهار روستو', en: 'Rosto Spice', weight: '50g × 12' },
+                    { ar: 'بهار مكسيكانا', en: 'Mexicana Spice', weight: '50g × 12' },
+                    { ar: 'بهار صيادية', en: 'Sayadieh Spice', weight: '50g × 12' },
+                    { ar: 'بهار منسف لحمة', en: 'Mansaf Spice', weight: '50g × 12' },
+                    { ar: 'بهار ستيك', en: 'Steak Spice', weight: '50g × 12' },
+                    { ar: 'غريل أرجنتيني', en: 'Argentinian Grill', weight: '50g × 12' },
+                    { ar: 'بهار قريدس', en: 'Shrimp Spice', weight: '50g × 12' },
+                    { ar: 'بهار باربيكيو', en: 'Barbecue Spice', weight: '50g × 12' },
+                    { ar: 'بهار هريسة', en: 'Harissa Spice', weight: '50g × 12' },
+                    { ar: 'بهار أوزي', en: 'Ouzi Spice', weight: '50g × 12' },
+                    { ar: 'بهار بفتاك', en: 'Biftek Spice', weight: '50g × 12' },
+                    { ar: 'تشيكن تندوري', en: 'Chicken Tandoori', weight: '50g × 12' },
+                    { ar: 'بهار كباب', en: 'Kebab Spice', weight: '50g × 12' },
+                    { ar: 'بهار همبرغر دجاج', en: 'Chicken Burger Spice', weight: '50g × 12' },
+                    { ar: 'خلطة حلباوي المميزة', en: 'Helbawi Special Blend', weight: '50g × 12' },
+                    { ar: 'ورق غار', en: 'Bay Leaves', weight: '50g × 12' },
+                    { ar: 'إكليل الجبل', en: 'Rosemary', weight: '50g × 12' },
+                    { ar: 'بهار بايلا', en: 'Paella Spice', weight: '50g × 12' },
+                    { ar: 'بهار تشيكن ساب', en: 'Chicken Sub Spice', weight: '50g × 12' },
+                    { ar: 'بهار دجاج نكهة الحامض', en: 'Lemon Chicken Spice', weight: '50g × 12' },
+                    { ar: 'بهار كوسكوس', en: 'Couscous Spice', weight: '50g × 12' },
+                    { ar: 'بهار نكهة الجبنة', en: 'Cheese Flavor Seasoning', weight: '50g × 12' },
+                    { ar: 'بودرة مرقة الدجاج', en: 'Chicken Bouillon Powder', weight: '50g × 12' },
+                    { ar: 'بهار نكهة البطاطا', en: 'Potato Seasoning', weight: '50g × 12' },
+                    { ar: 'بهار تشيلي', en: 'Chili Spice', weight: '50g × 12' },
+                    { ar: 'بهار فاهيتا أحمر', en: 'Red Fajita Spice', weight: '50g × 12' },
+                    { ar: 'بهار طاووق أبيض', en: 'White Tawook Spice', weight: '50g × 12' },
+                    { ar: 'خردل ناعم', en: 'Ground Mustard', weight: '50g × 12' },
+                    { ar: 'حبة البركة ناعمة', en: 'Ground Black Seed', weight: '50g × 12' },
+                    { ar: 'فلفل أحمر خشن', en: 'Coarse Red Pepper', weight: '50g × 12' },
+                    { ar: 'بهار مقلوبة', en: 'Maqluba Spice', weight: '50g × 12' },
+                    { ar: 'بهار مدخن', en: 'Smoked Spice', weight: '50g × 12' },
+                    { ar: 'بهار مندي', en: 'Mandi Spice', weight: '50g × 12' },
+                    { ar: 'بابريكا مدخنة', en: 'Smoked Paprika', weight: '50g × 12' },
+                    { ar: 'بسترما', en: 'Basturma Spice', weight: '50g × 12' },
+                    { ar: 'بهار كاري حر', en: 'Hot Curry Spice', weight: '50g × 12' },
+                    { ar: 'ورد عادي', en: 'Dried Rose Petals', weight: '50g × 12' },
+                    { ar: 'زعتر بيتزا', en: 'Pizza Thyme', weight: '50g × 12' },
+                    { ar: 'بهار جبنة صافي', en: 'Pure Cheese Seasoning', weight: '50g × 12' },
+                    { ar: 'سباغتي', en: 'Spaghetti Seasoning', weight: '50g × 12' },
+                    { ar: 'بهار زنجر', en: 'Zinger Spice', weight: '50g × 12' }
+                ]
+            },
+            {
+                id: 20,
+                category: 'spices_pouch',
+                name_ar: 'بهارات حب (ظرف)',
+                name_en: 'Whole Spices (Pouches)',
+                img: 'spices_whole_pouch.jpg',
+                items: [
+                    { ar: 'بهار حلو حب', en: 'Whole Allspice', weight: '50g × 12' },
+                    { ar: 'فلفل أسود حب', en: 'Whole Black Pepper', weight: '50g × 12' },
+                    { ar: 'كمون حب', en: 'Whole Cumin Seeds', weight: '50g × 12' },
+                    { ar: 'كزبرة حب', en: 'Whole Coriander Seeds', weight: '50g × 12' },
+                    { ar: 'يانسون حب', en: 'Whole Anise Seeds', weight: '50g × 12' },
+                    { ar: 'حبة البركة حب', en: 'Whole Black Seeds', weight: '50g × 12' },
+                    { ar: 'لوما (لومي)', en: 'Dried Lime (Loomi)', weight: '50g × 12' },
+                    { ar: 'خميرة', en: 'Yeast', weight: '50g × 12' },
+                    { ar: 'حلبة حب', en: 'Whole Fenugreek Seeds', weight: '50g × 12' },
+                    { ar: 'خولجان حب', en: 'Whole Galangal', weight: '50g × 12' },
+                    { ar: 'زنجبيل حب', en: 'Whole Ginger', weight: '50g × 12' },
+                    { ar: 'خردل حب', en: 'Whole Mustard Seeds', weight: '50g × 12' },
+                    { ar: 'شومر حب', en: 'Whole Fennel Seeds', weight: '50g × 12' },
+                    { ar: 'حبق', en: 'Dried Basil', weight: '50g × 12' },
+                    { ar: 'فليفلة حلوة خشنة', en: 'Coarse Sweet Pepper', weight: '50g × 12' },
+                    { ar: 'جوز الطيب حب', en: 'Whole Nutmeg', weight: '20g × 12' },
+                    { ar: 'محلب حب', en: 'Whole Mahlab', weight: '20g × 12' },
+                    { ar: 'قرنفل حب', en: 'Whole Cloves', weight: '20g × 12' },
+                    { ar: 'هال حب', en: 'Whole Cardamom', weight: '20g × 12' },
+                    { ar: 'عصفر', en: 'Safflower (Osfor)', weight: '20g × 12' },
+                    { ar: 'ورق غار', en: 'Bay Leaves', weight: '10g × 12' },
+                    { ar: 'قرفة عود', en: 'Cinnamon Sticks', weight: '100g × 12' },
+                    { ar: 'قرفة سيلاني', en: 'Ceylon Cinnamon Sticks', weight: '100g × 12' },
+                    { ar: 'خلطة سلق', en: 'Boiling Spice Mix', weight: '100g × 12' },
+                    { ar: 'دقة كبة حب', en: 'Whole Kibbeh Spice', weight: '100g × 12' },
+                    { ar: 'بيكربونات', en: 'Baking Soda', weight: '100g × 12' }
+                ]
+            },
+
+            // ================= 7. بهارات مرطبان (Jar Spices) =================
+            {
+                id: 21,
+                category: 'spices_jar',
+                name_ar: 'بهارات مرطبان',
+                name_en: 'Jar Spices',
+                img: 'spices_jar.jpg',
+                items: [
+                    { ar: 'بهار حلو ناعم', en: 'Ground Allspice', weight: '45g' },
+                    { ar: 'فلفل أسود ناعم', en: 'Ground Black Pepper', weight: '45g' },
+                    { ar: 'فلفل أحمر', en: 'Red Pepper', weight: '45g' },
+                    { ar: 'قرفة ناعمة', en: 'Ground Cinnamon', weight: '45g' },
+                    { ar: 'سبع بهارات', en: 'Seven Spices', weight: '45g' },
+                    { ar: 'كمون ناعم', en: 'Ground Cumin', weight: '45g' },
+                    { ar: 'كراوية ناعمة', en: 'Ground Caraway', weight: '45g' },
+                    { ar: 'بهار كاري', en: 'Curry Powder', weight: '45g' },
+                    { ar: 'عقدة صفراء (كركم)', en: 'Turmeric', weight: '45g' },
+                    { ar: 'بهار ستيك', en: 'Steak Spice', weight: '45g' },
+                    { ar: 'بابريكا', en: 'Paprika', weight: '45g' },
+                    { ar: 'دقة كبة ناعمة', en: 'Fine Kibbeh Spice', weight: '45g' },
+                    { ar: 'بهار مغربية', en: 'Moghrabieh Spice', weight: '45g' },
+                    { ar: 'بهار كبسة', en: 'Kabsa Spice', weight: '45g' },
+                    { ar: 'بهار دجاج', en: 'Chicken Spice', weight: '45g' },
+                    { ar: 'بهار طاووق', en: 'Tawook Spice', weight: '45g' },
+                    { ar: 'بهار بيتزا', en: 'Pizza Spice', weight: '45g' },
+                    { ar: 'بهار همبرغر', en: 'Burger Spice', weight: '45g' },
+                    { ar: 'شاورما لحمة', en: 'Beef Shawarma Spice', weight: '45g' },
+                    { ar: 'بهار سمك', en: 'Fish Spice', weight: '45g' },
+                    { ar: 'بهار كنتاكي', en: 'Kentucky Spice', weight: '45g' },
+                    { ar: 'بهار فاهيتا', en: 'Fajita Spice', weight: '45g' },
+                    { ar: 'بهار مشاوي', en: 'Grill Spice', weight: '45g' },
+                    { ar: 'إسكالوب دجاج', en: 'Chicken Escalope Spice', weight: '45g' },
+                    { ar: 'بهار كرسبي', en: 'Crispy Spice', weight: '45g' },
+                    { ar: 'بهار أرز', en: 'Rice Spice', weight: '45g' },
+                    { ar: 'فلفل أحمر خشن', en: 'Coarse Red Pepper', weight: '45g' },
+                    { ar: 'زنجبيل ناعم', en: 'Ground Ginger', weight: '45g' },
+                    { ar: 'خلطة حلباوي المميزة', en: 'Helbawi Special Blend', weight: '45g' },
+                    { ar: 'بهار سجق', en: 'Sujuk Spice', weight: '45g' },
+                    { ar: 'بهار نكهة البطاطا', en: 'Potato Seasoning', weight: '45g' },
+                    { ar: 'بهار شاورما دجاج', en: 'Chicken Shawarma Spice', weight: '45g' },
+                    { ar: 'بهار جبنة صافي', en: 'Pure Cheese Seasoning', weight: '45g' },
+                    { ar: 'بهار مدخن', en: 'Smoked Spice', weight: '45g' },
+                    { ar: 'جوز الطيب ناعم', en: 'Ground Nutmeg', weight: '30g' },
+                    { ar: 'هال ناعم', en: 'Ground Cardamom', weight: '30g' },
+                    { ar: 'بهار أبيض ناعم', en: 'Ground White Pepper', weight: '30g' },
+                    { ar: 'كزبرة ناعمة', en: 'Ground Coriander', weight: '30g' },
+                    { ar: 'سماق', en: 'Sumac', weight: '30g' },
+                    { ar: 'زعتر أوريغانو', en: 'Oregano', weight: '30g' },
+                    { ar: 'بهار حلو حب', en: 'Whole Allspice', weight: '30g' },
+                    { ar: 'فلفل أسود حب', en: 'Whole Black Pepper', weight: '30g' },
+                    { ar: 'جوز الطيب حب', en: 'Whole Nutmeg', weight: '20g' },
+                    { ar: 'كزبرة حب', en: 'Whole Coriander', weight: '20g' },
+                    { ar: 'قرنفل حب', en: 'Whole Cloves', weight: '20g' },
+                    { ar: 'هال حب', en: 'Whole Cardamom', weight: '20g' },
+                    { ar: 'نعنع يابس', en: 'Dried Mint', weight: '20g' },
+                    { ar: 'زعتر بيتزا', en: 'Pizza Thyme', weight: '20g' },
+                    { ar: 'قرفة عود', en: 'Cinnamon Sticks', weight: '20g' },
+                    { ar: 'حبق', en: 'Dried Basil', weight: '10g' },
+                    { ar: 'عصفر', en: 'Safflower', weight: '10g' },
+                    { ar: 'مردكوش', en: 'Marjoram', weight: '10g' },
+                    { ar: 'خميرة سريعة', en: 'Instant Yeast', weight: '70g' },
+                    { ar: 'فرميسال ملون + شوكولا', en: 'Colored & Chocolate Sprinkles', weight: '70g' },
+                    { ar: 'حامض الليمون', en: 'Citric Acid', weight: '100g' },
+                    { ar: 'بيكربونات', en: 'Baking Soda', weight: '120g' }
+                ]
+            },
+
+            // ================= 8. بهارات فلت (Bulk Spices 500g) =================
+            {
+                id: 22,
+                category: 'spices_bulk',
+                name_ar: 'بهارات فلت (500 غرام)',
+                name_en: 'Bulk Spices (500g)',
+                img: 'spices_bulk.jpg',
+                items: [
+                    { ar: 'بهار حلو', en: 'Allspice', weight: '500g' },
+                    { ar: 'فلفل أسود', en: 'Black Pepper', weight: '500g' },
+                    { ar: 'فلفل أحمر', en: 'Red Pepper', weight: '500g' },
+                    { ar: 'قرفة', en: 'Cinnamon', weight: '500g' },
+                    { ar: 'سبع بهارات', en: 'Seven Spices', weight: '500g' },
+                    { ar: 'دقة كعك', en: 'Kaak Spice', weight: '500g' },
+                    { ar: 'كمون ناعم', en: 'Ground Cumin', weight: '500g' },
+                    { ar: 'كزبرة', en: 'Coriander', weight: '500g' },
+                    { ar: 'كراوية', en: 'Caraway', weight: '500g' },
+                    { ar: 'كاري', en: 'Curry', weight: '500g' },
+                    { ar: 'يانسون ناعم', en: 'Ground Anise', weight: '500g' },
+                    { ar: 'عقدة صفراء (كركم)', en: 'Turmeric', weight: '500g' },
+                    { ar: 'فليفلة حلوة', en: 'Sweet Red Pepper', weight: '500g' },
+                    { ar: 'حامض الليمون', en: 'Citric Acid', weight: '500g' },
+                    { ar: 'ثوم شرحات', en: 'Garlic Flakes', weight: '500g' },
+                    { ar: 'ثوم مجفف', en: 'Garlic Powder', weight: '500g' },
+                    { ar: 'بصل مجفف بودرة', en: 'Onion Powder', weight: '500g' },
+                    { ar: 'شومر ناعم', en: 'Ground Fennel', weight: '500g' },
+                    { ar: 'جوز الطيب ناعم', en: 'Ground Nutmeg', weight: '500g' },
+                    { ar: 'بهار أبيض', en: 'White Pepper', weight: '500g' },
+                    { ar: 'بابريكا', en: 'Paprika', weight: '500g' },
+                    { ar: 'محلب ناعم', en: 'Ground Mahlab', weight: '500g' },
+                    { ar: 'حبة البركة', en: 'Black Seeds', weight: '500g' },
+                    { ar: 'دقة كبة مجروشة', en: 'Coarse Kibbeh Spice', weight: '500g' },
+                    { ar: 'دقة كبة حب', en: 'Whole Kibbeh Spice', weight: '500g' },
+                    { ar: 'نعنع', en: 'Dried Mint', weight: '500g' },
+                    { ar: 'مردكوش', en: 'Marjoram', weight: '500g' },
+                    { ar: 'كمون حب', en: 'Whole Cumin', weight: '500g' },
+                    { ar: 'يانسون حب', en: 'Whole Anise', weight: '500g' },
+                    { ar: 'قرنفل ناعم', en: 'Ground Cloves', weight: '500g' },
+                    { ar: 'هال ناعم', en: 'Ground Cardamom', weight: '500g' },
+                    { ar: 'زنجبيل ناعم', en: 'Ground Ginger', weight: '500g' },
+                    { ar: 'خولجان ناعم', en: 'Ground Galangal', weight: '500g' },
+                    { ar: 'حلبة ناعمة', en: 'Ground Fenugreek', weight: '500g' },
+                    { ar: 'عصفر', en: 'Safflower', weight: '500g' },
+                    { ar: 'شبة ناعمة', en: 'Alum Powder', weight: '500g' },
+                    { ar: 'خميرة باكيت', en: 'Yeast Pack', weight: '500g' },
+                    { ar: 'قرفة عود سيلاني', en: 'Ceylon Cinnamon Sticks', weight: '500g' },
+                    { ar: 'قرفة عود', en: 'Cinnamon Sticks', weight: '500g' },
+                    { ar: 'قرنفل حب', en: 'Whole Cloves', weight: '500g' },
+                    { ar: 'زعتر ورق', en: 'Thyme Leaves', weight: '500g' },
+                    { ar: 'سماق', en: 'Sumac', weight: '500g' },
+                    { ar: 'دقة كبة ناعمة', en: 'Fine Kibbeh Spice', weight: '500g' },
+                    { ar: 'بهار مغربية', en: 'Moghrabieh Spice', weight: '500g' },
+                    { ar: 'بهار فلافل', en: 'Falafel Spice', weight: '500g' },
+                    { ar: 'بهار كبسة', en: 'Kabsa Spice', weight: '500g' },
+                    { ar: 'بهار دجاج', en: 'Chicken Spice', weight: '500g' },
+                    { ar: 'بهار طاووق أبيض', en: 'White Tawook Spice', weight: '500g' },
+                    { ar: 'بهار طاووق', en: 'Tawook Spice', weight: '500g' },
+                    { ar: 'بهار مقانق', en: 'Makanek Spice', weight: '500g' },
+                    { ar: 'بهار شاورما لحمة', en: 'Beef Shawarma Spice', weight: '500g' },
+                    { ar: 'بهار شاورما دجاج', en: 'Chicken Shawarma Spice', weight: '500g' },
+                    { ar: 'بهار همبرغر', en: 'Burger Spice', weight: '500g' },
+                    { ar: 'بهار سجق', en: 'Sujuk Spice', weight: '500g' },
+                    { ar: 'بهار كفتة', en: 'Kafta Spice', weight: '500g' },
+                    { ar: 'خلطة كرسبي', en: 'Crispy Coating Mix', weight: '500g' },
+                    { ar: 'زعتر أوريغانو', en: 'Oregano', weight: '500g' },
+                    { ar: 'بهار بيتزا', en: 'Pizza Spice', weight: '500g' },
+                    { ar: 'بهار إسكالوب دجاج', en: 'Chicken Escalope Spice', weight: '500g' },
+                    { ar: 'بهار بسترما', en: 'Basturma Spice', weight: '500g' },
+                    { ar: 'بهار برياني', en: 'Biryani Spice', weight: '500g' },
+                    { ar: 'بهار كنتاكي', en: 'Kentucky Spice', weight: '500g' },
+                    { ar: 'بهار فاهيتا أحمر', en: 'Red Fajita Spice', weight: '500g' },
+                    { ar: 'بهار فاهيتا', en: 'Fajita Spice', weight: '500g' },
+                    { ar: 'بهار فيلادلفيا', en: 'Philadelphia Spice', weight: '500g' },
+                    { ar: 'بهار مكسيكانا', en: 'Mexicana Spice', weight: '500g' },
+                    { ar: 'بهار صيني', en: 'Chinese Spice', weight: '500g' },
+                    { ar: 'بهار غريل أرجنتيني', en: 'Argentinian Grill', weight: '500g' },
+                    { ar: 'بهار كرسبي', en: 'Crispy Spice', weight: '500g' },
+                    { ar: 'بهار فرنسيسكو', en: 'Francisco Spice', weight: '500g' },
+                    { ar: 'بهار مشاوي', en: 'Grill Spice', weight: '500g' },
+                    { ar: 'بهار ناغتس', en: 'Nuggets Spice', weight: '500g' },
+                    { ar: 'بهار بروستد', en: 'Broasted Spice', weight: '500g' },
+                    { ar: 'بهار تشيكن ساب', en: 'Chicken Sub Spice', weight: '500g' },
+                    { ar: 'باربيكيو', en: 'Barbecue Spice', weight: '500g' },
+                    { ar: 'بهار سمك', en: 'Fish Spice', weight: '500g' },
+                    { ar: 'بهار زنجر', en: 'Zinger Spice', weight: '500g' },
+                    { ar: 'بودرة مرقة الدجاج', en: 'Chicken Bouillon Powder', weight: '500g' },
+                    { ar: 'بهار نكهة الجبنة', en: 'Cheese Flavor Seasoning', weight: '500g' },
+                    { ar: 'بابريكا مدخنة', en: 'Smoked Paprika', weight: '500g' },
+                    { ar: 'بهار بطاطا', en: 'Potato Seasoning', weight: '500g' },
+                    { ar: 'بهار أرز', en: 'Rice Spice', weight: '500g' },
+                    { ar: 'بهار صيادية', en: 'Sayadieh Spice', weight: '500g' },
+                    { ar: 'بهار كايجن', en: 'Cajun Spice', weight: '500g' },
+                    { ar: 'بهار روستو', en: 'Rosto Spice', weight: '500g' },
+                    { ar: 'بهار هريسة', en: 'Harissa Spice', weight: '500g' },
+                    { ar: 'بهار دجاج نكهة الحامض', en: 'Lemon Chicken Spice', weight: '500g' },
+                    { ar: 'بهار منسف لحمة', en: 'Mansaf Spice', weight: '500g' },
+                    { ar: 'فلفل أسود حب', en: 'Whole Black Pepper', weight: '500g' },
+                    { ar: 'بهار تطبيقة', en: 'Tatbiqa Spice', weight: '500g' },
+                    { ar: 'دقة نفسة', en: 'Nafsa Spice Mix', weight: '500g' },
+                    { ar: 'فلفل أحمر خشن', en: 'Coarse Red Pepper', weight: '500g' }
+                ]
             }
         ];
 
-        // Webpage Startup
         document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
             updateLanguageUI();
+            renderProducts();
         });
 
-        // Switch Language function
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
             document.documentElement.lang = currentLang;
-            
             updateLanguageUI();
             renderProducts();
         }
 
-        // Apply Language texts
         function updateLanguageUI() {
             const data = translations[currentLang];
-            
-            // Promobar
-            document.getElementById('promo-bar').textContent = data.promoBar;
+            const cats = categoryLabels[currentLang];
 
-            // Nav link texts
+            document.getElementById('promo-bar').textContent = data.promoBar;
             document.getElementById('nav-about-link').textContent = data.navAbout;
             document.getElementById('nav-journey-link').textContent = data.navJourney;
             document.getElementById('nav-catalog-link').textContent = data.navCatalog;
             document.getElementById('nav-contact-link').textContent = currentLang === 'ar' ? 'طلب جملة' : 'Wholesale';
-            
             document.getElementById('mob-about-link').textContent = data.navAbout;
             document.getElementById('mob-journey-link').textContent = data.navJourney;
             document.getElementById('mob-catalog-link').textContent = data.navCatalog;
             document.getElementById('mob-contact-link').textContent = currentLang === 'ar' ? 'طلب جملة' : 'Wholesale';
-
             document.getElementById('nav-brand').textContent = currentLang === 'ar' ? 'حلباوي إخوان' : 'Helbawi Bros.';
             document.getElementById('nav-sub').textContent = data.navSub;
 
-            // Hero section
             document.getElementById('hero-badge').innerHTML = `🌾 ${data.heroBadge}`;
             document.getElementById('hero-title').textContent = data.heroTitle;
             document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
@@ -658,19 +1087,15 @@
             document.getElementById('hero-primary-btn').textContent = data.heroPrimary;
             document.getElementById('hero-secondary-btn').textContent = data.heroSecondary;
 
-            // About Us
             document.getElementById('about-title').textContent = data.aboutTitle;
             document.getElementById('about-p1').innerHTML = data.aboutP1;
             document.getElementById('about-p2').innerHTML = data.aboutP2;
-            
             document.getElementById('stat-since').textContent = data.statSince;
             document.getElementById('stat-years').textContent = data.statYears;
             document.getElementById('stat-items').textContent = data.statItems;
 
-            // Quality Steps
             document.getElementById('journey-badge').textContent = data.journeyBadge;
             document.getElementById('journey-title').textContent = data.journeyTitle;
-            
             document.getElementById('step-1-title').textContent = data.step1Title;
             document.getElementById('step-1-desc').textContent = data.step1Desc;
             document.getElementById('step-2-title').textContent = data.step2Title;
@@ -680,33 +1105,27 @@
             document.getElementById('step-4-title').textContent = data.step4Title;
             document.getElementById('step-4-desc').textContent = data.step4Desc;
 
-            // Catalog Intro and Search placeholder
             document.getElementById('cat-badge').textContent = data.catBadge;
             document.getElementById('cat-title').textContent = data.catTitle;
             document.getElementById('search-input').placeholder = data.searchPlaceholder;
-            
-            // Catalog Category button translations
-            document.getElementById('btn-all').textContent = data.catAll;
-            document.getElementById('btn-grains').textContent = data.catGrains;
-            document.getElementById('btn-spices').textContent = data.catSpices;
-            document.getElementById('btn-zaatar').textContent = data.catZaatar;
-            document.getElementById('btn-mouneh').textContent = data.catMouneh;
 
-            // Contact form Title and fields
+            Object.keys(cats).forEach(key => {
+                const btn = document.getElementById(`btn-${key}`);
+                if (btn) btn.textContent = cats[key];
+            });
+
             document.getElementById('contact-title').textContent = data.contactTitle;
             document.getElementById('contact-desc').textContent = data.contactDesc;
             document.getElementById('call-wa').textContent = data.callWa;
             document.getElementById('call-phone').textContent = data.callPhone;
             document.getElementById('call-loc').textContent = data.callLoc;
             document.getElementById('call-loc-detail').textContent = data.callLocDetail;
-            
             document.getElementById('form-title').textContent = data.formTitle;
             document.getElementById('lbl-name').textContent = data.lblName;
             document.getElementById('lbl-phone').textContent = data.lblPhone;
             document.getElementById('lbl-needs').textContent = data.lblNeeds;
             document.getElementById('form-submit-btn').textContent = data.formSubmit;
 
-            // Footer Section
             document.getElementById('footer-title').textContent = currentLang === 'ar' ? 'حلباوي إخوان' : 'Helbawi Bros.';
             document.getElementById('footer-sub').textContent = data.promoBar.replace(/🌾/g, '').trim();
             document.getElementById('foot-about').textContent = data.navAbout;
@@ -714,59 +1133,54 @@
             document.getElementById('foot-catalog').textContent = data.navCatalog;
             document.getElementById('copyright').textContent = data.copyright;
             document.getElementById('built-by').textContent = data.builtBy;
-
-            // Language Toggle Btn
             document.getElementById('lang-btn').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
 
-            // Adapt visual text flow based on Language
-            const textContainers = ['hero-text-container', 'about-text-container', 'contact-info-container', 'form-container'];
-            textContainers.forEach(id => {
+            ['hero-text-container', 'about-text-container', 'contact-info-container', 'form-container'].forEach(id => {
                 const el = document.getElementById(id);
                 if (el) {
-                    if (currentLang === 'ar') {
-                        el.classList.add('text-right');
-                        el.classList.remove('text-left');
-                    } else {
-                        el.classList.add('text-left');
-                        el.classList.remove('text-right');
-                    }
+                    el.classList.toggle('text-right', currentLang === 'ar');
+                    el.classList.toggle('text-left', currentLang !== 'ar');
                 }
             });
         }
 
-        // Render Cards
         function renderProducts() {
             const grid = document.getElementById('products-grid');
             grid.innerHTML = '';
-            const searchVal = document.getElementById('search-input').value.toLowerCase();
+            const searchVal = document.getElementById('search-input').value.trim().toLowerCase();
 
-            const filtered = products.filter(p => {
-                const name = currentLang === 'ar' ? p.name_ar : p.name_en;
-                const matchesSearch = name.toLowerCase().includes(searchVal);
-                const matchesCat = currentCategory === 'all' || p.category === currentCategory;
-                return matchesSearch && matchesCat;
+            const filtered = productGroups.filter(g => {
+                const matchesCat = currentCategory === 'all' || g.category === currentCategory;
+                if (!matchesCat) return false;
+                if (!searchVal) return true;
+
+                const groupNameMatch = g.name_ar.toLowerCase().includes(searchVal) || g.name_en.toLowerCase().includes(searchVal);
+                const itemMatch = g.items.some(i => i.ar.toLowerCase().includes(searchVal) || i.en.toLowerCase().includes(searchVal));
+                return groupNameMatch || itemMatch;
             });
 
-            filtered.forEach(p => {
+            filtered.forEach(g => {
                 const card = document.createElement('div');
-                card.className = "bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer flex flex-col h-full";
-                card.setAttribute('onclick', `openModal(${p.id})`);
+                card.className = "bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col h-full group";
+                card.setAttribute('onclick', `openModal(${g.id})`);
 
-                const title = currentLang === 'ar' ? p.name_ar : p.name_en;
-                const packaging = currentLang === 'ar' ? p.packaging_ar : p.packaging_en;
+                const title = currentLang === 'ar' ? g.name_ar : g.name_en;
+                const catName = categoryLabels[currentLang][g.category];
+                const itemsCountText = `${g.items.length} ${translations[currentLang].itemsWord}`;
 
                 card.innerHTML = `
-                    <div class="relative w-full h-40 sm:h-48 overflow-hidden bg-gray-50 border-b border-gray-100">
-                        <img src="${p.img}" alt="${title}" class="w-full h-full object-cover">
+                    <div class="relative w-full h-40 sm:h-48 overflow-hidden bg-gray-100 border-b border-gray-100">
+                        <img src="${g.img}" alt="${title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='image_21.jpg'">
+                        <span class="absolute top-2 left-2 bg-brand-dark/80 text-amber-200 text-xs font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">${itemsCountText}</span>
                     </div>
                     <div class="p-4 flex flex-col justify-between flex-1">
                         <div class="${currentLang === 'ar' ? 'text-right' : 'text-left'}">
-                            <h3 class="font-bold text-base sm:text-lg text-brand-dark hover:text-brand-red transition-colors duration-200 line-clamp-1">${title}</h3>
-                            <p class="text-xs text-brand-gold font-semibold uppercase mt-1 tracking-wider">${translations[currentLang]['cat' + p.category.charAt(0).toUpperCase() + p.category.slice(1)]}</p>
+                            <p class="text-xs text-brand-gold font-semibold uppercase tracking-wider">${catName}</p>
+                            <h3 class="font-bold text-base sm:text-lg text-brand-dark group-hover:text-brand-red transition-colors mt-1">${title}</h3>
                         </div>
-                        <div class="mt-4 pt-3 border-t border-gray-50 flex items-center justify-between text-xs sm:text-sm text-gray-500 gap-2">
-                            <span><i class="fa-solid fa-box text-xs text-gray-400 ml-1"></i> ${packaging}</span>
-                            <i class="fa-solid fa-arrow-left text-brand-red hover:translate-x-1 transition-transform"></i>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm text-brand-red font-semibold">
+                            <span>${translations[currentLang].viewItems}</span>
+                            <i class="fa-solid ${currentLang === 'ar' ? 'fa-arrow-left' : 'fa-arrow-right'} group-hover:translate-x-1 transition-transform"></i>
                         </div>
                     </div>
                 `;
@@ -774,77 +1188,70 @@
             });
         }
 
-        // Category trigger
         function setCategory(cat) {
             currentCategory = cat;
-            
-            // Toggle active filter CSS classes
-            const btns = ['btn-all', 'btn-grains', 'btn-spices', 'btn-zaatar', 'btn-mouneh'];
-            btns.forEach(btnId => {
-                const el = document.getElementById(btnId);
-                el.className = "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all";
+            Object.keys(categoryLabels.ar).forEach(key => {
+                const el = document.getElementById(`btn-${key}`);
+                if (el) {
+                    el.className = "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all";
+                }
             });
-            
-            const activeId = `btn-${cat}`;
-            document.getElementById(activeId).className = "bg-brand-red text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-lg transition-all active-filter";
-
+            const activeEl = document.getElementById(`btn-${cat}`);
+            if (activeEl) {
+                activeEl.className = "bg-brand-red text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-sm";
+            }
             renderProducts();
         }
 
-        // Real-time Search
         function filterProducts() {
             renderProducts();
         }
 
-        // Display Modal
         function openModal(id) {
-            const p = products.find(prod => prod.id === id);
-            if (!p) return;
+            const g = productGroups.find(group => group.id === id);
+            if (!g) return;
 
-            const modal = document.getElementById('product-modal');
-            const title = currentLang === 'ar' ? p.name_ar : p.name_en;
-            const desc = currentLang === 'ar' ? p.desc_ar : p.desc_en;
-            const packaging = currentLang === 'ar' ? p.packaging_ar : p.packaging_en;
-
-            document.getElementById('modal-img').src = p.img;
-            document.getElementById('modal-category').textContent = translations[currentLang]['cat' + p.category.charAt(0).toUpperCase() + p.category.slice(1)];
+            const title = currentLang === 'ar' ? g.name_ar : g.name_en;
+            document.getElementById('modal-img').src = g.img;
+            document.getElementById('modal-img').onerror = function() { this.src = 'image_21.jpg'; };
+            document.getElementById('modal-category').textContent = categoryLabels[currentLang][g.category];
             document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal-description').innerHTML = `${desc}<br><br><strong>${currentLang === 'ar' ? 'التعبئة المتوفرة:' : 'Available Packaging:'}</strong> ${packaging}`;
-            
-            // Build direct Custom WhatsApp link
-            const waMsg = encodeURIComponent(`${currentLang === 'ar' ? 'مرحباً حلباوي إخوان، أود الاستفسار عن منتج:' : 'Hello Helbawi Bros, I would like to inquire about product:'} ${title}`);
+            document.getElementById('modal-count').textContent = `${g.items.length} ${translations[currentLang].itemsWord}`;
+
+            const listContainer = document.getElementById('modal-items-list');
+            listContainer.innerHTML = g.items.map((item, index) => `
+                <div class="flex items-center justify-between bg-brand-clay/60 hover:bg-brand-clay px-3.5 py-2.5 rounded-lg text-sm transition-colors">
+                    <span class="font-semibold text-brand-dark"><span class="text-brand-gold font-bold ml-1.5">${index + 1}.</span> ${currentLang === 'ar' ? item.ar : item.en}</span>
+                    <span dir="ltr" class="text-xs font-bold bg-white text-brand-red border border-brand-red/20 px-2.5 py-1 rounded-md shrink-0">${item.weight}</span>
+                </div>
+            `).join('');
+
+            const waMsg = encodeURIComponent(`${currentLang === 'ar' ? 'مرحباً حلباوي إخوان، أود الاستفسار عن أصناف قسم:' : 'Hello Helbawi Bros, I would like to inquire about:'} ${title}`);
             document.getElementById('modal-whatsapp-btn').href = `https://wa.me/9613220893?text=${waMsg}`;
             document.getElementById('modal-wa-text').textContent = translations[currentLang].modalWaText;
             document.getElementById('modal-close-btn').textContent = translations[currentLang].modalClose;
 
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // block page background scroll
+            document.getElementById('product-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             document.getElementById('product-modal').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // release back background scroll
+            document.body.style.overflow = 'auto';
         }
 
-        // Mobile Menu trigger
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                icon.className = 'fa-solid fa-xmark text-xl';
-            } else {
-                menu.classList.add('hidden');
-                icon.className = 'fa-solid fa-bars text-xl';
-            }
+            menu.classList.toggle('hidden');
+            icon.className = menu.classList.contains('hidden') ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
         }
 
-        // Simple Form feedback alert
         function handleFormSubmit(event) {
             event.preventDefault();
-            const alertMsg = currentLang === 'ar' ? 
-                'نشكرك على تواصلك مع شركة حلباوي إخوان! تم إرسال طلب عرض أسعار الجملة بنجاح، وسيتواصل معك أحد مندوبي المبيعات قريباً عبر الهاتف أو الواتساب.' : 
-                'Thank you for contacting Helbawi Bros! Your wholesale inquiry has been submitted successfully. A sales representative will connect with you shortly via phone or WhatsApp.';
+            const alertMsg = currentLang === 'ar'
+                ? 'نشكرك على تواصلك مع شركة حلباوي إخوان! تم إرسال طلب عرض أسعار الجملة بنجاح.'
+                : 'Thank you for contacting Helbawi Bros! Your wholesale inquiry has been submitted successfully.';
             alert(alertMsg);
             event.target.reset();
         }
